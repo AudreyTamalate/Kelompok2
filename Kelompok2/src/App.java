@@ -6,9 +6,12 @@ public class App {
 
         while (choice != 4) {
             System.out.println("Menu:");
-            System.out.println("1. Option 1");
-            System.out.println("2. Option 2");
-            System.out.println("3. Option 3");
+            System.out.println("1. Pendaftaran Relawan");
+            System.out.println("2. Donasi Dana dan Barang");
+            System.out.println("3. Daur Ulang");
+            System.out.println("1. Donor Darah");
+            System.out.println("2. Event Kunjugan Amal");
+            System.out.println("3. Rating");
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
 
@@ -29,6 +32,17 @@ public class App {
                     // Add your code for Option 3 here
                     break;
                 case 4:
+                    System.out.println("Exiting the program... Goodbye!");
+                    break;
+                case 5:
+                    System.out.println("You selected Option 2");
+                    // Add your code for Option 2 here
+                    break;
+                case 6:
+                    System.out.println("You selected Option 3");
+                    // Add your code for Option 3 here
+                    break;
+                case 7:
                     System.out.println("Exiting the program... Goodbye!");
                     break;
                 default:
