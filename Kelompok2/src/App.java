@@ -4,15 +4,15 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
 
-        while (choice != 4) {
+        while (choice != 7) {
             System.out.println("Menu:");
             System.out.println("1. Pendaftaran Relawan");
             System.out.println("2. Donasi Dana dan Barang");
             System.out.println("3. Daur Ulang");
-            System.out.println("1. Donor Darah");
-            System.out.println("2. Event Kunjugan Amal");
-            System.out.println("3. Rating");
-            System.out.println("4. Exit");
+            System.out.println("4. Donor Darah");
+            System.out.println("5. Event Kunjugan Amal");
+            System.out.println("6. Rating");
+            System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
