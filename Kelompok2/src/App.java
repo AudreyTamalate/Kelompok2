@@ -6,7 +6,7 @@ public class App {
 
         while (choice != 7) {
             System.out.println("Menu:");
-            System.out.println("1. Pendaftaran Relawan");
+            System.out.println("1. Relawan");
             System.out.println("2. Donasi Dana dan Barang");
             System.out.println("3. Daur Ulang");
             System.out.println("4. Donor Darah");
