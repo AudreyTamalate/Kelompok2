@@ -2,7 +2,7 @@
 //Data yang ditampung berupa Nama Pendonor, Jenis Kelamin Pendonor, Golongan Darah Pendonor, dan Keberhasilan cek darah.
 //Kelas ini digunakan untuk mengumpulkan darah dari para pendonor untuk membantu orang yang membutuhkan
 public class DonorDarah {
-<<<<<<< HEAD
+
     private String NamaPendonor;
     private String JenisKelaminPendonor;
     private String GolonganDarahPendonor;
@@ -40,7 +40,5 @@ public class DonorDarah {
     public void setKeberhasilanCekDarah(String KeberhasilanCekDarah) {
         this.KeberhasilanCekDarah = KeberhasilanCekDarah;
     }
-=======
 
->>>>>>> e30ff747629f23343714d7a9292e6113b433faa2
 }
