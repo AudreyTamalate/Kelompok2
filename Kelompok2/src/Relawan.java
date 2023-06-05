@@ -10,6 +10,17 @@ public class Relawan {
     private String NomorTelepon;
 
 
+    public Relawan() {
+    }
+
+    public Relawan(String Nama, String Usia, String NIK, String JenisKelamin, String NomorTelepon){
+        this.Nama = Nama;
+        this.Usia = Usia;
+        this.NIK = NIK;
+        this.JenisKelamin = JenisKelamin;
+        this.NomorTelepon = NomorTelepon;
+    }
+
     public String getNama() {
         return this.Nama;
     }
@@ -50,4 +61,16 @@ public class Relawan {
         this.NomorTelepon = NomorTelepon;
     }
     
+
+    @Override
+    public String toString() {
+        return "{" +
+            " Nama='" + getNama() + "'" +
+            ", Usia='" + getUsia() + "'" +
+            ", NIK='" + getNIK() + "'" +
+            ", JenisKelamin='" + getJenisKelamin() + "'" +
+            ", NomorTelepon='" + getNomorTelepon() + "'" +
+            "}";
+    }
+
 }

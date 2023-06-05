@@ -8,6 +8,16 @@ public class Donasi {
     private String JumlahDonasiBarang;
     private String NomorTelepon;
 
+    public Donasi() {
+    }
+
+    public Donasi (String JenisDonasi, String NamaDonatur, String JumlahDonasiDana, String JumlahDonasiBarang, String NomorTelepon){
+        this.JenisDonasi = JenisDonasi;
+        this.NamaDonatur = NamaDonatur;
+        this.JumlahDonasiDana = JumlahDonasiDana;
+        this.JumlahDonasiBarang = JumlahDonasiBarang;
+        this.NomorTelepon = NomorTelepon;
+    }
 
     public String getJenisDonasi() {
         return this.JenisDonasi;
@@ -49,6 +59,16 @@ public class Donasi {
         this.NomorTelepon = NomorTelepon;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+            " JenisDonasi='" + getJenisDonasi() + "'" +
+            ", NamaDonatur='" + getNamaDonatur() + "'" +
+            ", JumlahDonasiDana='" + getJumlahDonasiDana() + "'" +
+            ", JumlahDonasiBarang='" + getJumlahDonasiBarang() + "'" +
+            ", NomorTelepon='" + getNomorTelepon() + "'" +
+            "}";
+    }
 
 
 }
