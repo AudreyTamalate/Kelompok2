@@ -56,12 +56,20 @@ public class App {
         scanner.close();
     }
 
+<<<<<<< HEAD
 
     public static void init(){
         Relawan Upin = new Relawan("Upin", "18", "1201008186030062", "Lali-laki", "085162615514");
         Relawan Ehsan = new Relawan("Ehsan", "12", "1203928493829382", "Laki-laki", "085108332039");
         Relawan Jennie = new Relawan("Jennie", "22", "1208395748392849", "Perempuan", "085120393844");
 
+=======
+    public static void init (){
+        Donasi Ipin = new Donasi("Barang", "Ipin", "-", "2", "082345670987");
+        Donasi Mail = new Donasi("Dana", "Mail", "Rp. 100.000", "-", "082546789345");
+        Donasi Rose = new Donasi("Dana", "Rose", "Rp. 500.000", "-", "0812345678909");
+    }
+>>>>>>> 38a4f2798b4a9fb8e4787ec0258d4b50af023f94
 }
 
 
