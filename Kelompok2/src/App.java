@@ -55,6 +55,12 @@ public class App {
 
         scanner.close();
     }
+
+    public static void init (){
+        Donasi Ipin = new Donasi("Barang", "Ipin", "-", "2", "082345670987");
+        Donasi Mail = new Donasi("Dana", "Mail", "Rp. 100.000", "-", "082546789345");
+        Donasi Rose = new Donasi("Dana", "Rose", "Rp. 500.000", "-", "0812345678909");
+    }
 }
 
 
