@@ -7,6 +7,14 @@ public class DaurUlang {
     private String Nama;
 
 
+    public DaurUlang() {
+    }
+    public DaurUlang(String JenisBarangBekas, String JumlahBarangBekas, String Nama){
+        this.JenisBarangBekas = JenisBarangBekas;
+        this.JumlahBarangBekas = JumlahBarangBekas;
+        this.Nama = Nama;
+    }
+
     public String getJenisBarangBekas() {
         return this.JenisBarangBekas;
     }
@@ -29,6 +37,15 @@ public class DaurUlang {
 
     public void setNama(String Nama) {
         this.Nama = Nama;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+            " JenisBarangBekas='" + getJenisBarangBekas() + "'" +
+            ", JumlahBarangBekas='" + getJumlahBarangBekas() + "'" +
+            ", Nama='" + getNama() + "'" +
+            "}";
     }
 
 }
