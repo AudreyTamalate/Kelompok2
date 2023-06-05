@@ -56,6 +56,7 @@ public class App {
 
         scanner.close();
     }
+<<<<<<< Updated upstream
 
     public static void init(){
 <<<<<<< Updated upstream
@@ -78,6 +79,12 @@ public class App {
         Donasi Mail = new Donasi("Dana", "Mail", "Rp. 100.000", "-", "082546789345");
         Donasi Rose = new Donasi("Dana", "Rose", "Rp. 500.000", "-", "0812345678909");
 
+>>>>>>> Stashed changes
+=======
+    public static void init() {
+        DonorDarah usman = new DonorDarah("Usman Halim", "Laki-laki", "O", "Berhasil");
+        DonorDarah susiyanti = new DonorDarah("Susiyanti Tambunan", "Perempuan", "A+", "Gagal");
+        DonorDarah susmanto = new DonorDarah("Susmanto Amin", "Laki-laki", "B+", "Berhasil");
 >>>>>>> Stashed changes
     }
 }
