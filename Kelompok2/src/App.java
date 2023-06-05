@@ -55,6 +55,13 @@ public class App {
 
         scanner.close();
     }
+
+
+    public static void init(){
+        Relawan Upin = new Relawan("Upin", "18", "1201008186030062", "Lali-laki", "085162615514");
+        Relawan Ehsan = new Relawan("Ehsan", "12", "1203928493829382", "Laki-laki", "085108332039");
+        Relawan Jennie = new Relawan("Jennie", "22", "1208395748392849", "Perempuan", "085120393844");
+
 }
 
 
