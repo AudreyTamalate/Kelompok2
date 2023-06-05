@@ -8,6 +8,15 @@ public class Eventkunjunganamal {
     private String Tanggal;
 
 
+    public Eventkunjunganamal() {
+    }
+    
+    public Eventkunjunganamal(String NamaEvent, String Waktu, String Tanggal){
+        this.NamaEvent = NamaEvent;
+        this.Waktu = Waktu;
+        this.Tanggal = Tanggal;
+    }
+
     public String getNamaEvent() {
         return this.NamaEvent;
     }
@@ -30,6 +39,15 @@ public class Eventkunjunganamal {
 
     public void setTanggal(String Tanggal) {
         this.Tanggal = Tanggal;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+            " NamaEvent='" + getNamaEvent() + "'" +
+            ", Waktu='" + getWaktu() + "'" +
+            ", Tanggal='" + getTanggal() + "'" +
+            "}";
     }
 
 }
