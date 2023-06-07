@@ -2,16 +2,16 @@
 // Data yang di keluarkan pada output akan mengarahkan pengguna untuk memilih input
 // Dalam class ini bakal mengarahkan pengguna untuk menginput event apa yang akan di pilih
 //owen(03081220010)
-public class Eventkunjunganamal {
+public class EventKunjunganAmal {
     private String NamaEvent;
     private String Waktu;
     private String Tanggal;
 
 
-    public Eventkunjunganamal() {
+    public EventKunjunganAmal() {
     }
     
-    public Eventkunjunganamal(String NamaEvent, String Waktu, String Tanggal){
+    public EventKunjunganAmal(String NamaEvent, String Waktu, String Tanggal){
         this.NamaEvent = NamaEvent;
         this.Waktu = Waktu;
         this.Tanggal = Tanggal;

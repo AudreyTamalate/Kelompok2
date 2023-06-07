@@ -65,9 +65,9 @@ public class App {
     }
 
     public static void init(){
-        Eventkunjunganamal budi = new Eventkunjunganamal("Donor Darah", "12.00", "01 April 2023");
-        Eventkunjunganamal anto = new Eventkunjunganamal("Bakti Sosial", "13.00", "02 Mei 2023");
-        Eventkunjunganamal gopal = new Eventkunjunganamal("Ulang Tahun Yayasan", "11.00", "05 Januari 2023");
+        EventKunjunganAmal budi = new EventKunjunganAmal("Donor Darah", "12.00", "01 April 2023");
+        EventKunjunganAmal anto = new EventKunjunganAmal("Bakti Sosial", "13.00", "02 Mei 2023");
+        EventKunjunganAmal gopal = new EventKunjunganAmal("Ulang Tahun Yayasan", "11.00", "05 Januari 2023");
     }
 
     public static void init(){
