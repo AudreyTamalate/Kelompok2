@@ -12,7 +12,7 @@ public class DonorDarah {
     public DonorDarah() {
     }
 
-    public DonorDarah(String NamaPendonor, String JenisKelaminPendonor, String GolonganDarahPendonor, String keberhasilanCekDarahString) {
+    public DonorDarah(String NamaPendonor, String JenisKelaminPendonor, String GolonganDarahPendonor, String KeberhasilanCekDarah) {
         this.NamaPendonor = NamaPendonor;
         this.JenisKelaminPendonor = JenisKelaminPendonor;
         this.GolonganDarahPendonor = GolonganDarahPendonor;
