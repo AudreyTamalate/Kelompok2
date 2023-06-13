@@ -2,51 +2,107 @@ import java.util.Scanner;
 import java.util.concurrent.atomic.DoubleAdder;
 public class App {
     public static void main(String[] args) throws Exception{
-        
+        System.out.println("Relawan :");
         init();
-        Rating budi = new Rating("Budi", "1854211", "2.5");
-        System.out.println(budi);
-        Rating anto = new Rating("Anto", "15151110", " 3.8");
-        System.out.println(anto);
-        Rating gopal = new Rating("gopal", "18415153", "4.8");
-        System.out.println(gopal);
+        Relawan upin = new Relawan("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521");
+        System.out.println(upin);
+        Relawan ipin = new Relawan("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164");
+        System.out.println(ipin);
+        Relawan apin = new Relawan("Apin", "22", "1208151315161315315", "Perempuan", "081511161");
+        System.out.println(apin);
+
+        System.out.println("");
+        System.out.println("Donasi :");
+        init();
+        Donasi upin1 = new Donasi("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521", "Barang", null, "2");
+        System.out.println(upin1);
+        Donasi ipin1 = new Donasi("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164", "Dana", "Rp. 100.000", null);
+        System.out.println(ipin1);
+        Donasi apin1 = new Donasi("Apin", "22", "1208151315161315315", "Perempuan", "081511161", "Dana", "Rp. 500.000", null);
+        System.out.println(apin1);
+
+        System.out.println("");
+        System.out.println("Daur Ulang :");
+        init();
+        DaurUlang upin2 = new DaurUlang("Sedotan", "20", "Upin", "18", "1201008186030062", "Laki-laki", "0857983216521");
+        System.out.println(upin2);
+        DaurUlang ipin2 = new DaurUlang("Kaleng", "10", "Ipin", "12", "120451515860151", "Laki-laki", "0845626295164");
+        System.out.println(ipin2);
+        DaurUlang apin2 = new DaurUlang("Botol Aqua", "5", "Apin", "22", "1208151315161315315", "Perempuan", "081511161");
+        System.out.println(apin2);
+
+        System.out.println("");
+        System.out.println("Donor Darah :");
+        init();
+        DonorDarah upin3 = new DonorDarah("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521", "O", "Berhasil");
+        System.out.println(upin3);
+        DonorDarah ipin3 = new DonorDarah("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164", "A+", "Gagal");
+        System.out.println(ipin3);
+        DonorDarah apin3 = new DonorDarah("Apin", "22", "1208151315161315315", "Perempuan", "081511161", "B+", "Berhasil");
+        System.out.println(apin3);
+
+        System.out.println("");
+        System.out.println("Event Kunjungan Amal :");
+        init();
+        EventKunjunganAmal upin4 = new EventKunjunganAmal("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521", "Medan, 12 Juli 2023, 12.00pm, makan bersama, panti asuhan suci");
+        System.out.println(upin4);
+        EventKunjunganAmal ipin4 = new EventKunjunganAmal("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164", "Medan, 1 April 2023, 02.00pm, galang dana, Yayasan Alim");
+        System.out.println(ipin4);
+        EventKunjunganAmal apin4 = new EventKunjunganAmal("Apin", "22", "1208151315161315315", "Perempuan", "081511161", "Binjai, 8 Agustus 2023, 10.00am, sumbangan, panti jumpo sehat");
+        System.out.println(apin4);
+
+
+        System.out.println("");
+        System.out.println("Rating :");
+        init();
+        Rating upin5 = new Rating("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521", "2.5");
+        System.out.println(upin5);
+        Rating ipin5 = new Rating("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164", "3.8");
+        System.out.println(ipin5);
+        Rating apin5 = new Rating("Apin", "22", "1208151315161315315", "Perempuan", "081511161", "4.8");
+        System.out.println(apin5);
+
+        
+    }
+
+
+    public static void init(){
+        Relawan upin = new Relawan("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521");
+        Relawan ipin = new Relawan("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164");
+        Relawan apin = new Relawan("Apin", "22", "1208151315161315315", "Perempuan", "081511161");
     }
 
     public static void init(){
-        Rating budi = new Rating("Budi", "1854211", "2.5");
-        Rating anto = new Rating("Anto", "15151110", " 3.8");
-        Rating gopal = new Rating("gopal", "18415153", "4.8");
+        Rating upin5 = new Rating("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521", "2.5");
+        Rating ipin5 = new Rating("Ehsan", "12", "120451515860151", "Laki-laki", "0845626295164", " 3.8");
+        Rating apin5 = new Rating("Apin", "22", "1208151315161315315", "Perempuan", "081511161", "4.8");
     }
 
     public static void init(){
-        EventKunjunganAmal budi = new EventKunjunganAmal("Donor Darah", "12.00", "01 April 2023");
-        EventKunjunganAmal anto = new EventKunjunganAmal("Bakti Sosial", "13.00", "02 Mei 2023");
-        EventKunjunganAmal gopal = new EventKunjunganAmal("Ulang Tahun Yayasan", "11.00", "05 Januari 2023");
+        EventKunjunganAmal upin4 = new EventKunjunganAmal("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521", "Medan, 12 Juli 2023, 12.00pm, makan bersama, panti asuhan suci");
+        EventKunjunganAmal ipin4 = new EventKunjunganAmal("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164", "Medan, 1 April 2023, 02.00pm, galang dana, Yayasan Alim");
+        EventKunjunganAmal apin4 = new EventKunjunganAmal("Apin", "22", "1208151315161315315", "Perempuan", "081511161", "Binjai, 8 Agustus 2023, 10.00am, sumbangan, panti jumpo sehat");
     }
 
     public static void init(){
-        DaurUlang anita = new DaurUlang("Sedotan", "20", "Anita");
-        DaurUlang iwan = new DaurUlang("Kaleng", "10", "Iwan");
-        DaurUlang sally = new DaurUlang("Botol Aqua", "5", "Sally");
+        DaurUlang upin2 = new DaurUlang("Sedotan", "20", "Upin", "18", "1201008186030062", "Laki-laki", "0857983216521");
+        DaurUlang ipin2 = new DaurUlang("Kaleng", "10", "Ipin", "12", "120451515860151", "Laki-laki", "0845626295164");
+        DaurUlang apin2 = new DaurUlang("Botol Aqua", "5", "Apin", "22", "1208151315161315315", "Perempuan", "081511161");
     }
 
     public static void init(){
-        Donasi Ipin = new Donasi("Barang", "Ipin", "-", "2", "082345670987");
-        Donasi Mail = new Donasi("Dana", "Mail", "Rp. 100.000", "-", "082546789345");
-        Donasi Rose = new Donasi("Dana", "Rose", "Rp. 500.000", "-", "0812345678909");
+        Donasi upin1 = new Donasi("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521", "Barang", null, "2");
+        Donasi ipin1 = new Donasi("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164", "Dana", "Rp. 100.000", null);
+        Donasi apin1 = new Donasi("Apin", "22", "1208151315161315315", "Perempuan", "081511161", "Dana", "Rp. 500.000", null);
     }    
 
     public static void init() {
-        DonorDarah usman = new DonorDarah("Usman Halim", "Laki-laki", "O", "Berhasil");
-        DonorDarah susiyanti = new DonorDarah("Susiyanti Tambunan", "Perempuan", "A+", "Gagal");
-        DonorDarah susmanto = new DonorDarah("Susmanto Amin", "Laki-laki", "B+", "Berhasil");
+        DonorDarah upin3 = new DonorDarah("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521", "O", "Berhasil");
+        DonorDarah ipin3 = new DonorDarah("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164", "A+", "Gagal");
+        DonorDarah Apin3 = new DonorDarah("Apin", "22", "1208151315161315315", "Perempuan", "081511161", "B+", "Berhasil");
     }
 
-    public static void init(){
-        Relawan Upin = new Relawan("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521");
-        Relawan Ehsan = new Relawan("Ehsan", "12", "120451515860151", "Laki-laki", "0845626295164");
-        Relawan jennie = new Relawan("Jennie", "22", "1208151315161315315", "Perempuan", "081511161");
-    }
+
 }
 
 
