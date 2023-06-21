@@ -52,7 +52,6 @@ public class App {
     
     public static void init() {
         System.out.println("Initializing...");
-        // Perform any initialization tasks here
     }
 
     public static void displayRelawan() {
