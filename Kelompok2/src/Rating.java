@@ -24,6 +24,9 @@ public class Rating extends Relawan {
 
 
 
+    public Rating(String rating) {
+    }
+
     public String getNama() {
         return this.Nama;
     }

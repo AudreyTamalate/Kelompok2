@@ -26,6 +26,12 @@ public class Donasi {
     }
 
 
+    public Donasi(String jenisDonasi2, String jumlahDonasi) {
+    }
+
+    public Donasi(String nama2, String umur, String nik2, String jenisKelamin2, String nomorTelepon2) {
+    }
+
     public String getNama() {
         return this.Nama;
     }

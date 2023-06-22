@@ -24,6 +24,9 @@ public class EventKunjunganAmal {
     }
 
 
+    public EventKunjunganAmal(String namaEvent, String daftarEvent) {
+    }
+
     public String getNama() {
         return this.Nama;
     }

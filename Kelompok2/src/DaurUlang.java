@@ -24,6 +24,8 @@ public class DaurUlang {
     }
 
 
+    public DaurUlang(String jenisBarangBekas2, String jumlahBarangBekas2) {
+    }
     public String getJenisBarangBekas() {
         return this.JenisBarangBekas;
     }

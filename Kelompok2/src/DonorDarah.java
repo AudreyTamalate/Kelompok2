@@ -25,6 +25,9 @@ public class DonorDarah {
     }
 
 
+    public DonorDarah(String golonganDarah, String keberhasilanCekDarah2) {
+    }
+
     public String getNama() {
         return this.Nama;
     }
