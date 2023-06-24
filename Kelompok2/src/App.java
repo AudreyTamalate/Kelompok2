@@ -103,7 +103,9 @@ public class App {
     public static void displayDonasi() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Donasi :");
+        System.out.println("Donasi");
+        System.out.println("1.Donasi Barang");
+        System.out.println("2.Donasi Uang");
         System.out.print("Jenis Donasi: ");
         String jenisDonasi = scanner.nextLine();
 
