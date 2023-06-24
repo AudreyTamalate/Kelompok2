@@ -89,8 +89,8 @@ public class App {
             return;
         }
 
-        Donasi donasi = new Donasi(nama, umur, nik, jenisKelamin, nomorTelepon);
-        System.out.println(donasi);
+        Relawan relawan = new Relawan(nama, umur, nik, jenisKelamin, nomorTelepon);
+        System.out.println(relawan1);
         System.out.println();
 
         scanner.close();
