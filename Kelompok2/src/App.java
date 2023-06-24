@@ -89,10 +89,12 @@ public class App {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
             System.out.println("Thank you and see you again");
+            System.out.println("Goodbye!");
+            System.exit(0);
         }
 
-        Donasi donasi = new Donasi(nama, umur, nik, jenisKelamin, nomorTelepon);
-        System.out.println(donasi);
+        Relawan relawan = new Relawan(nama, umur, nik, jenisKelamin, nomorTelepon);
+        System.out.println(relawan);
         System.out.println();
 
         scanner.close();
@@ -116,14 +118,16 @@ public class App {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
             System.out.println("Thank you and see you again");
+            System.out.println("Goodbye!");
+            System.exit(0);
         }
 
-        Donasi donasi = new Donasi(jenisDonasi, jumlahDonasi);
-        System.out.println(donasi);
-        System.out.println();
+        DaurUlang daurUlang = new DaurUlang(jenisDonasi, jumlahDonasi);
+    System.out.println(daurUlang);
+    System.out.println();
 
-        scanner.close();
-    }
+    scanner.close();
+}
 
     public static void displayDaurUlang() {
         Scanner scanner = new Scanner(System.in);
@@ -143,6 +147,8 @@ public class App {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
             System.out.println("Thank you and see you again");
+            System.out.println("Goodbye!");
+            System.exit(0);
         }
 
         DaurUlang daurUlang = new DaurUlang(jenisBarangBekas, jumlahBarangBekas);
@@ -170,6 +176,8 @@ public class App {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
             System.out.println("Thank you and see you again");
+            System.out.println("Goodbye!");
+            System.exit(0);
         }
 
         DonorDarah donorDarah = new DonorDarah(golonganDarah, keberhasilanCekDarah);
@@ -197,6 +205,8 @@ public class App {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
             System.out.println("Thank you and see you again");
+            System.out.println("Goodbye!");
+            System.exit(0);
         }
 
         EventKunjunganAmal eventKunjunganAmal = new EventKunjunganAmal(namaEvent, daftarEvent);
@@ -207,7 +217,6 @@ public class App {
     }
 
     public static void displayRating() {
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Rating :");
@@ -222,6 +231,8 @@ public class App {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
             System.out.println("Thank you and see you again");
+            System.out.println("Goodbye!");
+            System.exit(0);
         }
 
         Rating volunteerRating = new Rating(rating);
