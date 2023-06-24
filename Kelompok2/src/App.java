@@ -87,10 +87,12 @@ public class App {
         String goBack = scanner.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
+        } else if (goBack.equalsIgnoreCase("no")) {
+            System.out.println("Thank you and see you again");
         }
 
-        Relawan relawan = new Relawan(nama, umur, nik, jenisKelamin, nomorTelepon);
-        System.out.println(relawan1);
+        Donasi donasi = new Donasi(nama, umur, nik, jenisKelamin, nomorTelepon);
+        System.out.println(donasi);
         System.out.println();
 
         scanner.close();
@@ -112,6 +114,8 @@ public class App {
         String goBack = scanner.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
+        } else if (goBack.equalsIgnoreCase("no")) {
+            System.out.println("Thank you and see you again");
         }
 
         Donasi donasi = new Donasi(jenisDonasi, jumlahDonasi);
@@ -137,6 +141,8 @@ public class App {
         String goBack = scanner.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
+        } else if (goBack.equalsIgnoreCase("no")) {
+            System.out.println("Thank you and see you again");
         }
 
         DaurUlang daurUlang = new DaurUlang(jenisBarangBekas, jumlahBarangBekas);
@@ -155,16 +161,15 @@ public class App {
 
         System.out.print("Keberhasilan Cek Darah (ya/tidak): ");
         String keberhasilanCekDarah = scanner.nextLine();
-        if (keberhasilanCekDarah.equalsIgnoreCase("ya"))
-        System.out.println("Anda telah berhasil mendaftar!");
 
-        if (keberhasilanCekDarah.equalsIgnoreCase("tidak"))
-        System.out.println("Anda tidak berhasil mendaftar!");
+        System.out.println("Anda telah berhasil mendaftar!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
         String goBack = scanner.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
+        } else if (goBack.equalsIgnoreCase("no")) {
+            System.out.println("Thank you and see you again");
         }
 
         DonorDarah donorDarah = new DonorDarah(golonganDarah, keberhasilanCekDarah);
@@ -190,6 +195,8 @@ public class App {
         String goBack = scanner.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
+        } else if (goBack.equalsIgnoreCase("no")) {
+            System.out.println("Thank you and see you again");
         }
 
         EventKunjunganAmal eventKunjunganAmal = new EventKunjunganAmal(namaEvent, daftarEvent);
@@ -200,6 +207,7 @@ public class App {
     }
 
     public static void displayRating() {
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Rating :");
@@ -212,6 +220,8 @@ public class App {
         String goBack = scanner.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
+        } else if (goBack.equalsIgnoreCase("no")) {
+            System.out.println("Thank you and see you again");
         }
 
         Rating volunteerRating = new Rating(rating);

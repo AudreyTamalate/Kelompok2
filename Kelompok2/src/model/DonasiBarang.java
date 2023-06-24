@@ -1,12 +1,12 @@
 package model;
-public class DonasiBarang extends Donasi{
-    
-    public DonasiBarang(String Nama, String Usia, String NIK, String JenisKelamin, String NomorTelepon, String JenisDonasi, String JumlahDonasiDana, String JumlahDonasiBarang){
+
+public class DonasiBarang extends Donasi {
+    public DonasiBarang(String Nama, String Usia, String NIK, String JenisKelamin, String NomorTelepon, String JenisDonasi, String JumlahDonasiDana, String JumlahDonasiBarang) {
         super(Nama, Usia, NIK, JenisKelamin, NomorTelepon, JenisDonasi, JumlahDonasiDana, JumlahDonasiBarang);
     }
 
     @Override
-    public void DonasiBarang() {
-        System.out.println("Terima kasih telah berdonasi");
+    public String toString() {
+        return "DonasiBarang\n" + super.toString();
     }
 }
