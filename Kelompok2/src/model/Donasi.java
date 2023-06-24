@@ -1,15 +1,16 @@
 //Pada kelas ini akan menampung jenis donasi dan siapa yang memberi donasi tersebut
 // Data yang ditampung berupa jenis donasi, nama donatur, jumlah donasi, nomor telepon donatur
 //Kelas ini akan digunakan untuk membantu semua kegiatan yang akan dilaksanakan pada Tzu Chi
-public class Donasi {
-    private String Nama;
-    private String Usia;
-    private String NIK;
-    private String JenisKelamin;
-    private String NomorTelepon;
-    private String JenisDonasi;
-    private String JumlahDonasiDana;
-    private String JumlahDonasiBarang;
+
+public abstract class Donasi {
+    public String Nama;
+    public String Usia;
+    public String NIK;
+    public String JenisKelamin;
+    public String NomorTelepon;
+    public String JenisDonasi;
+    public String JumlahDonasiDana;
+    public String JumlahDonasiBarang;
 
     public Donasi() {
     }

@@ -155,8 +155,11 @@ public class App {
 
         System.out.print("Keberhasilan Cek Darah (ya/tidak): ");
         String keberhasilanCekDarah = scanner.nextLine();
-
+        if (keberhasilanCekDarah.equalsIgnoreCase("ya"))
         System.out.println("Anda telah berhasil mendaftar!");
+
+        if (keberhasilanCekDarah.equalsIgnoreCase("tidak"))
+        System.out.println("Anda tidak berhasil mendaftar!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
         String goBack = scanner.nextLine();
