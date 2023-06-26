@@ -96,45 +96,6 @@ public class App {
         input.close();
 
     }
-    
-
-     public static void displayRelawan() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Relawan :");
-        System.out.print("Nama: ");
-        String nama = scanner.nextLine();
-
-        System.out.print("Umur: ");
-        String umur = scanner.nextLine();
-
-        System.out.print("NIK: ");
-        String nik = scanner.nextLine();
-
-        System.out.print("Jenis Kelamin: ");
-        String jenisKelamin = scanner.nextLine();
-
-        System.out.print("Nomor Telepon: ");
-        String nomorTelepon = scanner.nextLine();
-
-        System.out.println("Selamat anda telah terdaftar!");
-
-        System.out.print("Do you want to go back to the main menu? (yes/no): ");
-        String goBack = scanner.nextLine();
-        if (goBack.equalsIgnoreCase("yes")) {
-            return;
-        } else if (goBack.equalsIgnoreCase("no")) {
-            System.out.println("Thank you and see you again");
-            System.out.println("Goodbye!");
-            System.exit(0);
-        }
-
-        Relawan relawan = new Relawan(nama, umur, nik, jenisKelamin, nomorTelepon);
-        System.out.println(relawan);
-        System.out.println();
-
-        scanner.close();
-    }
 
     public static void displayDonasi() {
         Scanner scanner = new Scanner(System.in);
