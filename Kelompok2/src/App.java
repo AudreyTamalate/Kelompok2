@@ -29,32 +29,27 @@ public class App {
                     inputDataRelawan();
                     break;
 
-
                 case 2:
-                    displayRelawan();
-                    break;
-
-                case 3:
                     displayDonasi();
                     break;
 
-                case 4:
+                case 3:
                     displayDaurUlang();
                     break;
 
-                case 5:
+                case 4:
                     displayDonorDarah();
                     break;
 
-                case 6:
+                case 5:
                     displayEventKunjunganAmal();
                     break;
 
-                case 7:
+                case 6:
                     displayRating();
                     break;
 
-                case 8:
+                case 7:
                     exit = true;
                     break;
 
@@ -79,14 +74,29 @@ public class App {
         usia = input.nextLine();
         System.out.print("NIK\t:");
         NIK = input.nextLine();
-        System.out.print("JenisKelamin\t:");
+        System.out.print("JenisKelamin(L/P)\t:");
         jenisKelamin= input.nextLine();
         System.out.print("NomorTelepon\t:");
         nomorTelepon = input.nextLine();
         relawan.add(new Relawan(nama, usia, NIK, jenisKelamin, nomorTelepon));
-        input.close();
-    }
 
+        System.out.println("Selamat anda telah terdaftar!");
+
+        System.out.print("Do you want to go back to the main menu? (yes/no): ");
+        String goBack = input.nextLine();
+        if (goBack.equalsIgnoreCase("yes")) {
+            return;
+        } else if (goBack.equalsIgnoreCase("no")) {
+            System.out.println("Thank you and see you again");
+            System.out.println("Goodbye!");
+            System.exit(0);
+        }
+        System.out.println(relawan);
+        System.out.println();
+        input.close();
+
+    }
+    
 
      public static void displayRelawan() {
         Scanner scanner = new Scanner(System.in);
@@ -161,7 +171,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Daur Ulang :");
-        System.out.print("Masukkan Nama Relawan: ");
+       
         
         System.out.print("Jenis Barang Bekas: ");
         String jenisBarangBekas = scanner.nextLine();
