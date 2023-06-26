@@ -91,10 +91,16 @@ public class App {
             System.out.println("Goodbye!");
             System.exit(0);
         }
+        relawan.add(new Relawan(nama,usia,NIK,jenisKelamin,nomorTelepon));
         System.out.println(relawan);
         System.out.println();
         input.close();
 
+    }
+    public static void cetakDataRelawan(){
+        for (Relawan relawan2 : relawan) {
+            System.out.println(relawan2);
+        }
     }
 
     public static void displayDonasi() {
