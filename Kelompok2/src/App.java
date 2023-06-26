@@ -1,6 +1,8 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
+    public static ArrayList<Relawan> relawan=new ArrayList<Relawan>();
     public static void main(String[] args) throws Exception {
         init();
 
@@ -22,31 +24,37 @@ public class App {
             scanner.nextLine();
 
             switch (choice) {
-                case 1:
+
+                case 1: 
+                    inputDataRelawan();
+                    break;
+
+
+                case 2:
                     displayRelawan();
                     break;
 
-                case 2:
+                case 3:
                     displayDonasi();
                     break;
 
-                case 3:
+                case 4:
                     displayDaurUlang();
                     break;
 
-                case 4:
+                case 5:
                     displayDonorDarah();
                     break;
 
-                case 5:
+                case 6:
                     displayEventKunjunganAmal();
                     break;
 
-                case 6:
+                case 7:
                     displayRating();
                     break;
 
-                case 7:
+                case 8:
                     exit = true;
                     break;
 
@@ -61,8 +69,26 @@ public class App {
     public static void init() {
         System.out.println("Initializing...");
     }
+    
+    public static void inputDataRelawan(){
+        Scanner input = new Scanner(System.in);
+        String nama,usia,NIK,jenisKelamin,nomorTelepon;
+        System.out.print("Nama\t:");
+        nama = input.nextLine();
+        System.out.print("Usia\t:");
+        usia = input.nextLine();
+        System.out.print("NIK\t:");
+        NIK = input.nextLine();
+        System.out.print("JenisKelamin\t:");
+        jenisKelamin= input.nextLine();
+        System.out.print("NomorTelepon\t:");
+        nomorTelepon = input.nextLine();
+        relawan.add(new Relawan(nama, usia, NIK, jenisKelamin, nomorTelepon));
+        input.close();
+    }
 
-    public static void displayRelawan() {
+
+     public static void displayRelawan() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Relawan :");
@@ -135,6 +161,8 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Daur Ulang :");
+        System.out.print("Masukkan Nama Relawan: ");
+        
         System.out.print("Jenis Barang Bekas: ");
         String jenisBarangBekas = scanner.nextLine();
 
