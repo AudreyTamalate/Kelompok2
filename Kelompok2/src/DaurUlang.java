@@ -1,99 +1,55 @@
 //Pada kelas ini akan menampung jenis barang bekas, jumlah barang bekas, nama dari orang yang mengikuti daur ulang
 //Data yang ditampung berupa jenis barang bekas, jumlah barang bekas, dan nama dari yang mengikuti daur ulang
 //Kelas ini akan digunakan untuk membantu Tzu Chi mendapatkan barang bekas dalam melakukan daur ulang
+
 public class DaurUlang {
-    private String JenisBarangBekas;
-    private String JumlahBarangBekas;
-    private String Nama;
-    private String Usia;
-    private String NIK;
-    private String JenisKelamin;
-    private String NomorTelepon;;
+    private String jenisBarangBekas;
+    private String jumlahBarangBekas;
+    private Relawan relawan;
 
-
+    public DaurUlang(String jenisBarangBekas, String jumlahBarangBekas, Relawan relawan) {
+        this.jenisBarangBekas = jenisBarangBekas;
+        this.jumlahBarangBekas = jumlahBarangBekas;
+        this.relawan = relawan;
+    }
+        
+    
     public DaurUlang() {
     }
-    public DaurUlang(String JenisBarangBekas, String JumlahBarangBekas, String Nama, String Usia, String NIK, String JenisKelamin, String NomorTelepon){
-        this.JenisBarangBekas = JenisBarangBekas;
-        this.JumlahBarangBekas = JumlahBarangBekas;
-        this.Nama = Nama;
-        this.Usia = Usia;
-        this.NIK = NIK;
-        this.JenisKelamin = JenisKelamin;
-        this.NomorTelepon = NomorTelepon;
-    }
 
 
-    public DaurUlang(String jenisBarangBekas2, String jumlahBarangBekas2) {
-    }
     public String getJenisBarangBekas() {
-        return this.JenisBarangBekas;
+        return this.jenisBarangBekas;
     }
 
-    public void setJenisBarangBekas(String JenisBarangBekas) {
-        this.JenisBarangBekas = JenisBarangBekas;
+    public void setJenisBarangBekas(String jenisBarangBekas) {
+        this.jenisBarangBekas = jenisBarangBekas;
     }
 
     public String getJumlahBarangBekas() {
-        return this.JumlahBarangBekas;
+        return this.jumlahBarangBekas;
     }
 
-    public void setJumlahBarangBekas(String JumlahBarangBekas) {
-        this.JumlahBarangBekas = JumlahBarangBekas;
+    public void setJumlahBarangBekas(String jumlahBarangBekas) {
+        this.jumlahBarangBekas = jumlahBarangBekas;
     }
 
-    public String getNama() {
-        return this.Nama;
+    public Relawan getRelawan() {
+        return this.relawan;
     }
 
-    public void setNama(String Nama) {
-        this.Nama = Nama;
+    public void setRelawan(Relawan relawan) {
+        this.relawan = relawan;
     }
 
-    public String getUsia() {
-        return this.Usia;
-    }
-
-    public void setUsia(String Usia) {
-        this.Usia = Usia;
-    }
-
-    public String getNIK() {
-        return this.NIK;
-    }
-
-    public void setNIK(String NIK) {
-        this.NIK = NIK;
-    }
-
-    public String getJenisKelamin() {
-        return this.JenisKelamin;
-    }
-
-    public void setJenisKelamin(String JenisKelamin) {
-        this.JenisKelamin = JenisKelamin;
-    }
-
-    public String getNomorTelepon() {
-        return this.NomorTelepon;
-    }
-
-    public void setNomorTelepon(String NomorTelepon) {
-        this.NomorTelepon = NomorTelepon;
-    }
-    
     @Override
     public String toString() {
         return "{" +
-            " JenisBarangBekas='" + getJenisBarangBekas() + "'" +
-            ", JumlahBarangBekas='" + getJumlahBarangBekas() + "'" +
-            ", Nama='" + getNama() + "'" +
-            ", Usia='" + getUsia() + "'" +
-            ", NIK='" + getNIK() + "'" +
-            ", JenisKelamin='" + getJenisKelamin() + "'" +
-            ", NomorTelepon='" + getNomorTelepon() + "'" +
+            " jenisBarangBekas='" + getJenisBarangBekas() + "'" +
+            ", jumlahBarangBekas='" + getJumlahBarangBekas() + "'" +
+            ", relawan='" + getRelawan() + "'" +
             "}";
     }
-
+   
 
 }

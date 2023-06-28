@@ -64,13 +64,13 @@ public class Relawan {
 
     @Override
     public String toString() {
-        return "{" +
-            " Nama='" + getNama() + "'" +
-            ", Usia='" + getUsia() + "'" +
-            ", NIK='" + getNIK() + "'" +
-            ", JenisKelamin='" + getJenisKelamin() + "'" +
-            ", NomorTelepon='" + getNomorTelepon() + "'" +
-            "}";
+        return "|" +
+            " " + getNama() + "'" +
+            " " + getUsia() + "'" +
+            " " + getNIK() + "'" +
+            " " + getJenisKelamin() + "'" +
+            " " + getNomorTelepon() + "'" +
+            " ";
     }
 
 }

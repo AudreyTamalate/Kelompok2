@@ -6,6 +6,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         init();
 
+
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
@@ -18,6 +19,7 @@ public class App {
             System.out.println("5. Event Kunjungan Amal");
             System.out.println("6. Rating");
             System.out.println("7. Exit");
+            System.out.println("9. Tampilkan Data Relawan");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -52,6 +54,10 @@ public class App {
                 case 7:
                     exit = true;
                     break;
+                case 9:
+                    tampilDataRelawan();
+                    exit = true;
+                    break;
 
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -63,22 +69,43 @@ public class App {
 
     public static void init() {
         System.out.println("Initializing...");
+        
+        Relawan upin = new Relawan("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521");
+        relawan.add(upin);
+        Relawan ipin = new Relawan("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164");
+        relawan.add(ipin);
+        Relawan apin = new Relawan("Apin", "22", "1208151315161315315", "Perempuan", "081511161");
+        relawan.add(apin);
     }
     
     public static void inputDataRelawan(){
         Scanner input = new Scanner(System.in);
-        String nama,usia,NIK,jenisKelamin,nomorTelepon;
+        String nama=" ",usia=" ",NIK=" ",jenisKelamin=" ",nomorTelepon=" ";
         System.out.print("Nama\t:");
-        nama = input.nextLine();
+        if(input.hasNextLine())
+            nama = input.nextLine();
         System.out.print("Usia\t:");
-        usia = input.nextLine();
+        if(input.hasNextLine())
+            usia = input.nextLine();
         System.out.print("NIK\t:");
-        NIK = input.nextLine();
+        if(input.hasNextLine())
+            NIK = input.nextLine();
         System.out.print("JenisKelamin(L/P)\t:");
-        jenisKelamin= input.nextLine();
+        if(input.hasNextLine())
+            jenisKelamin= input.nextLine();
         System.out.print("NomorTelepon\t:");
-        nomorTelepon = input.nextLine();
+        if(input.hasNextLine())
+            nomorTelepon = input.nextLine();
+
         relawan.add(new Relawan(nama, usia, NIK, jenisKelamin, nomorTelepon));
+//tampil
+        for (Relawan relawan2 : relawan) {
+            System.out.println("Nama \t Usia \t NIK \t JK \t Tlp");
+            System.out.println(relawan2);
+        }
+        
+        System.out.println();
+        
 
         System.out.println("Selamat anda telah terdaftar!");
 
@@ -91,10 +118,18 @@ public class App {
             System.out.println("Goodbye!");
             System.exit(0);
         }
-        System.out.println(relawan);
-        System.out.println();
+        
         input.close();
+        
 
+    }
+    public static void tampilDataRelawan(){
+        
+//tampil
+        for (Relawan relawan2 : relawan) {
+            System.out.println("Nama \t Usia \t NIK \t JK \t Tlp");
+            System.out.println(relawan2);
+        }
     }
 
     public static void displayDonasi() {
@@ -121,8 +156,8 @@ public class App {
             System.exit(0);
         }
 
-        DaurUlang daurUlang = new DaurUlang(jenisDonasi, jumlahDonasi);
-    System.out.println(daurUlang);
+        Donasi donasi = new Donasi(jenisDonasi, jumlahDonasi);
+    System.out.println(donasi);
     System.out.println();
 
     scanner.close();
@@ -152,9 +187,9 @@ public class App {
             System.exit(0);
         }
 
-        DaurUlang daurUlang = new DaurUlang(jenisBarangBekas, jumlahBarangBekas);
-        System.out.println(daurUlang);
-        System.out.println();
+        DaurUlang daurUlang = new DaurUlang(jenisBarangBekas, jumlahBarangBekas,relawan.get(0));
+    System.out.println(daurUlang);
+    System.out.println();
 
         scanner.close();
     }
