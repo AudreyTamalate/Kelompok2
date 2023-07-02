@@ -5,35 +5,53 @@
 package model;
 
 public abstract class Donasi {
-    private String Nama;
-    private String Usia;
-    private String NIK;
-    private String JenisKelamin;
-    private String NomorTelepon;
-    private String JenisDonasi;
-    private String JumlahDonasiDana;
-    private String JumlahDonasiBarang;
+    public String jenisDonasi;
+    public String jumlahDonasiDana;
+    public String jumlahDonasiBarang;
 
-    public Donasi(String Nama, String Usia, String NIK, String JenisKelamin, String NomorTelepon, String JenisDonasi, String JumlahDonasiDana, String JumlahDonasiBarang) {
-        this.Nama = Nama;
-        this.Usia = Usia;
-        this.NIK = NIK;
-        this.JenisKelamin = JenisKelamin;
-        this.NomorTelepon = NomorTelepon;
-        this.JenisDonasi = JenisDonasi;
-        this.JumlahDonasiDana = JumlahDonasiDana;
-        this.JumlahDonasiBarang = JumlahDonasiBarang;
+    public Donasi() {
     }
+
+
+    public Donasi(String jenisDonasi, String jumlahDonasiDana, String jumlahDonasiBarang) {
+        this.jenisDonasi = jenisDonasi;
+        this.jumlahDonasiDana = jumlahDonasiDana;
+        this.jumlahDonasiBarang = jumlahDonasiBarang;
+    }
+    
+
+    public String getJenisDonasi() {
+        return this.jenisDonasi;
+    }
+
+    public void setJenisDonasi(String jenisDonasi) {
+        this.jenisDonasi = jenisDonasi;
+    }
+
+    public String getJumlahDonasiDana() {
+        return this.jumlahDonasiDana;
+    }
+
+    public void setJumlahDonasiDana(String jumlahDonasiDana) {
+        this.jumlahDonasiDana = jumlahDonasiDana;
+    }
+
+    public String getJumlahDonasiBarang() {
+        return this.jumlahDonasiBarang;
+    }
+
+    public void setJumlahDonasiBarang(String jumlahDonasiBarang) {
+        this.jumlahDonasiBarang = jumlahDonasiBarang;
+    }
+
 
     @Override
     public String toString() {
-        return "Nama: " + Nama + "\n" +
-                "Usia: " + Usia + "\n" +
-                "NIK: " + NIK + "\n" +
-                "Jenis Kelamin: " + JenisKelamin + "\n" +
-                "Nomor Telepon: " + NomorTelepon + "\n" +
-                "Jenis Donasi: " + JenisDonasi + "\n" +
-                "Jumlah Donasi (Dana): " + JumlahDonasiDana + "\n" +
-                "Jumlah Donasi (Barang): " + JumlahDonasiBarang;
+        return "{" +
+            " jenisDonasi='" + getJenisDonasi() + "'" +
+            ", jumlahDonasiDana='" + getJumlahDonasiDana() + "'" +
+            ", jumlahDonasiBarang='" + getJumlahDonasiBarang() + "'" +
+            "}";
     }
-}
+    
+    }

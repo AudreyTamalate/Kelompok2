@@ -4,7 +4,7 @@
 //owen(03081220010)
 public class EventKunjunganAmal {
     private String jadwal;
-
+    
 
     public EventKunjunganAmal() {
     }
