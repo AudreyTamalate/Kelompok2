@@ -18,7 +18,7 @@ public class App {
             System.out.println("5. Event Kunjungan Amal");
             System.out.println("6. Rating");
             System.out.println("7. Exit");
-            System.out.println("9. Tampilkan Data Relawan");
+            System.out.println("8. Tampilkan Data Relawan");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();

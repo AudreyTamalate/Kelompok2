@@ -5,9 +5,9 @@
 package model;
 
 public abstract class Donasi {
-    public String jenisDonasi;
-    public String jumlahDonasiDana;
-    public String jumlahDonasiBarang;
+    private String jenisDonasi;
+    private String jumlahDonasiDana;
+    private String jumlahDonasiBarang;
 
     public Donasi() {
     }
@@ -17,6 +17,11 @@ public abstract class Donasi {
         this.jenisDonasi = jenisDonasi;
         this.jumlahDonasiDana = jumlahDonasiDana;
         this.jumlahDonasiBarang = jumlahDonasiBarang;
+    }
+
+    public abstract void donation();
+    public void donasi(){
+        System.out.println("Donasi Berhasil!!!");
     }
     
 
@@ -45,13 +50,4 @@ public abstract class Donasi {
     }
 
 
-    @Override
-    public String toString() {
-        return "{" +
-            " jenisDonasi='" + getJenisDonasi() + "'" +
-            ", jumlahDonasiDana='" + getJumlahDonasiDana() + "'" +
-            ", jumlahDonasiBarang='" + getJumlahDonasiBarang() + "'" +
-            "}";
-    }
-    
-    }
+}
