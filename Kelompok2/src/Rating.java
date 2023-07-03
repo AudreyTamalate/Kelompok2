@@ -4,7 +4,6 @@
 //owen(03081220010)
 public class Rating {
     private String ratingScore;
-
     public Rating() {
     }
 

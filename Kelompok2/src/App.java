@@ -3,6 +3,11 @@ import java.util.Scanner;
 
 public class App {
     public static ArrayList<Relawan> relawan=new ArrayList<Relawan>();
+    public static ArrayList<DaurUlang> daurUlang=new ArrayList<DaurUlang>();
+    public static ArrayList<DonorDarah> donorDarah=new ArrayList<DonorDarah>();
+    public static ArrayList<Rating> rating=new ArrayList<Rating>();
+     public static ArrayList<EventKunjunganAmal> eventKunjunganAmal=new ArrayList<EventKunjunganAmal>();
+
     public static void main(String[] args) throws Exception {
         init();
 
@@ -166,19 +171,29 @@ public class App {
 }
 
     public static void inputDaurUlang() {
-        Scanner scanner = new Scanner(System.in);
-        String daurUlang=" ",jenisBarangBekas=" ",jumlahBarangBekas=" ";
-        System.out.print("Jenis Barang Bekas\t:");
+       Scanner input = new Scanner(System.in);
+        String jenisbarangbekas=" ",jumlahbarangbekas=" ";
+        System.out.print("jenisbarangbekas\t:");
         if(input.hasNextLine())
-            jenisBarangBekas = input.nextLine();
-        System.out.print("Jumlah Barang Bekas\t:");
+            jenisbarangbekas = input.nextLine();
+        System.out.print("jumlahbarangbekas\t:");
         if(input.hasNextLine())
-            jumlahBarangBekas = input.nextLine();
-       
-        System.out.println("Terima kasih atas barang daur ulang anda!");
+            jumlahbarangbekas = input.nextLine();
+
+        daurUlang.add(new DaurUlang(jenisbarangbekas, jumlahbarangbekas));
+//tampil
+        for (DaurUlang daurulang2 : daurUlang) {
+            System.out.println("JenisBarangBekas \t JumlahBarangBekas \t");
+            System.out.println(daurulang2);
+        }
+        
+        System.out.println();
+        
+
+        System.out.println("Selamat anda telah terdaftar!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
-        String goBack = scanner.nextLine();
+        String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
@@ -186,28 +201,36 @@ public class App {
             System.out.println("Goodbye!");
             System.exit(0);
         }
+        
+        input.close();
+        
 
-        DaurUlang daurUlang = new DaurUlang(jenisBarangBekas, jumlahBarangBekas);
-        System.out.println(daurUlang);
-        System.out.println();
-
-        scanner.close();
     }
 
     public static void inputDonorDarah() {
-        Scanner scanner = new Scanner(System.in);
+         Scanner input = new Scanner(System.in);
+        String golongandarahpendonor=" ",keberhasilancekdarah=" ";
+        System.out.print("GolonganDarahPendonor\t:");
+        if(input.hasNextLine())
+            golongandarahpendonor = input.nextLine();
+        System.out.print("KeberhasilanCekDarah\t:");
+        if(input.hasNextLine())
+            keberhasilancekdarah = input.nextLine();
 
-        System.out.println("Donor Darah :");
-        System.out.print("Golongan Darah: ");
-        String golonganDarah = scanner.nextLine();
+        donorDarah.add(new DonorDarah(golongandarahpendonor, keberhasilancekdarah));
+//tampil
+        for (DonorDarah donordarah2 : donorDarah) {
+            System.out.println("GolonganDarahPendonor \t KeberhasilanCekDarah \t");
+            System.out.println(donordarah2);
+        }
+        
+        System.out.println();
+        
 
-        System.out.print("Keberhasilan Cek Darah (ya/tidak): ");
-        String keberhasilanCekDarah = scanner.nextLine();
-
-        System.out.println("Anda telah berhasil mendaftar!");
+        System.out.println("Selamat anda telah terdaftar!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
-        String goBack = scanner.nextLine();
+        String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
@@ -215,28 +238,36 @@ public class App {
             System.out.println("Goodbye!");
             System.exit(0);
         }
+        
+        input.close();
+        
 
-        DonorDarah donorDarah = new DonorDarah(golonganDarah, keberhasilanCekDarah);
-        System.out.println(donorDarah);
-        System.out.println();
-
-        scanner.close();
     }
 
     public static void inputEventKunjunganAmal() {
-        Scanner scanner = new Scanner(System.in);
+       Scanner input = new Scanner(System.in);
+        String jadwal=" ";
+        System.out.print("Jadwal\t:");
+        if(input.hasNextLine())
+            jadwal = input.nextLine();
+        System.out.print("NomorTelepon\t:");
+        if(input.hasNextLine())
+            nomorTelepon = input.nextLine();
 
-        System.out.println("Event Kunjungan Amal :");
-        System.out.print("Event yang ingin anda ikuti: ");
-        String namaEvent = scanner.nextLine();
+        eventKunjunganAmal.add(new );
+//tampil
+        for (Relawan relawan2 : relawan) {
+            System.out.println("Nama \t Usia \t NIK \t JK \t Tlp");
+            System.out.println(relawan2);
+        }
+        
+        System.out.println();
+        
 
-        System.out.print("Daftar untuk event ini (yes/no): ");
-        String daftarEvent = scanner.nextLine();
-
-        System.out.println("Selamat pendaftaran anda berhasil!");
+        System.out.println("Selamat anda telah terdaftar!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
-        String goBack = scanner.nextLine();
+        String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
@@ -244,25 +275,33 @@ public class App {
             System.out.println("Goodbye!");
             System.exit(0);
         }
+        
+        input.close();
+        
 
-        EventKunjunganAmal eventKunjunganAmal = new EventKunjunganAmal(daftarEvent);
-        System.out.println(eventKunjunganAmal);
-        System.out.println();
-
-        scanner.close();
     }
 
     public static void inputRating() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        String ratingscore=" ";
+        System.out.print("RatingScore\t:");
+         ratingscore = input.nextLine();
+       
 
-        System.out.println("Rating :");
-        System.out.print("Silahkan Masukkan Rating Anda (1-5): ");
-        String rating = scanner.nextLine();
+        rating.add(new Rating(ratingscore));
+//tampil
+        for (DonorDarah donordarah2 : donorDarah) {
+            System.out.println("GolonganDarahPendonor \t KeberhasilanCekDarah \t");
+            System.out.println(donordarah2);
+        }
+        
+        System.out.println();
+        
 
-        System.out.println("Terima kasih atas masukan anda!");
+        System.out.println("Selamat anda telah terdaftar!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
-        String goBack = scanner.nextLine();
+        String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
@@ -270,11 +309,9 @@ public class App {
             System.out.println("Goodbye!");
             System.exit(0);
         }
+        
+        input.close();
+        
 
-        Rating volunteerRating = new Rating(rating);
-        System.out.println(volunteerRating);
-        System.out.println();
-
-        scanner.close();
     }
 }
