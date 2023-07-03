@@ -31,23 +31,23 @@ public class App {
                     break;
 
                 case 2:
-                    displayDonasi();
+                    inputDonasi();
                     break;
 
                 case 3:
-                    displayDaurUlang();
+                    inputDaurUlang();
                     break;
 
                 case 4:
-                    displayDonorDarah();
+                    inputDonorDarah();
                     break;
 
                 case 5:
-                    displayEventKunjunganAmal();
+                    inputEventKunjunganAmal();
                     break;
 
                 case 6:
-                    displayRating();
+                    inputRating();
                     break;
 
                 case 7:
@@ -133,7 +133,7 @@ public class App {
     }
     
 
-    public static void displayDonasi() {
+    public static void inputDonasi() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Jenis Donasi");
@@ -165,18 +165,16 @@ public class App {
     scanner.close();
 }
 
-    public static void displayDaurUlang() {
+    public static void inputDaurUlang() {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Daur Ulang :");
+        String daurUlang=" ",jenisBarangBekas=" ",jumlahBarangBekas=" ";
+        System.out.print("Jenis Barang Bekas\t:");
+        if(input.hasNextLine())
+            jenisBarangBekas = input.nextLine();
+        System.out.print("Jumlah Barang Bekas\t:");
+        if(input.hasNextLine())
+            jumlahBarangBekas = input.nextLine();
        
-        
-        System.out.print("Jenis Barang Bekas: ");
-        String jenisBarangBekas = scanner.nextLine();
-
-        System.out.print("Jumlah Barang Bekas: ");
-        String jumlahBarangBekas = scanner.nextLine();
-
         System.out.println("Terima kasih atas barang daur ulang anda!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
@@ -196,7 +194,7 @@ public class App {
         scanner.close();
     }
 
-    public static void displayDonorDarah() {
+    public static void inputDonorDarah() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Donor Darah :");
@@ -225,7 +223,7 @@ public class App {
         scanner.close();
     }
 
-    public static void displayEventKunjunganAmal() {
+    public static void inputEventKunjunganAmal() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Event Kunjungan Amal :");
@@ -254,7 +252,7 @@ public class App {
         scanner.close();
     }
 
-    public static void displayRating() {
+    public static void inputRating() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Rating :");
