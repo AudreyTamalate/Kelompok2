@@ -6,7 +6,6 @@ public class App {
     public static void main(String[] args) throws Exception {
         init();
 
-
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
@@ -19,7 +18,7 @@ public class App {
             System.out.println("5. Event Kunjungan Amal");
             System.out.println("6. Rating");
             System.out.println("7. Exit");
-            System.out.println("9. Tampilkan Data Relawan");
+            System.out.println("8. Tampilkan Data Relawan");
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -54,7 +53,8 @@ public class App {
                 case 7:
                     exit = true;
                     break;
-                case 9:
+
+                case 8:
                     tampilDataRelawan();
                     exit = true;
                     break;
@@ -131,6 +131,7 @@ public class App {
             System.out.println(relawan2);
         }
     }
+    
 
     public static void displayDonasi() {
         Scanner scanner = new Scanner(System.in);
@@ -157,8 +158,8 @@ public class App {
             System.exit(0);
         }
 
-        Donasi donasi = new Donasi(jenisDonasi, jumlahDonasi);
-    System.out.println(donasi);
+        DaurUlang daurUlang = new DaurUlang(jenisDonasi, jumlahDonasi);
+    System.out.println(daurUlang);
     System.out.println();
 
     scanner.close();
@@ -188,9 +189,9 @@ public class App {
             System.exit(0);
         }
 
-        DaurUlang daurUlang = new DaurUlang(jenisBarangBekas, jumlahBarangBekas,relawan.get(0));
-    System.out.println(daurUlang);
-    System.out.println();
+        DaurUlang daurUlang = new DaurUlang(jenisBarangBekas, jumlahBarangBekas);
+        System.out.println(daurUlang);
+        System.out.println();
 
         scanner.close();
     }
