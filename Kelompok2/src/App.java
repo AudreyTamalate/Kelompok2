@@ -135,12 +135,13 @@ public class App {
     public static void displayDonasi() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Donasi");
+        System.out.println("Jenis Donasi");
         System.out.println("1.Donasi Barang");
         System.out.println("2.Donasi Uang");
-        System.out.print("Jenis Donasi: ");
+        System.out.print("Pilih [1/2]: ");
         String jenisDonasi = scanner.nextLine();
 
+        
         System.out.print("Jumlah Donasi: ");
         String jumlahDonasi = scanner.nextLine();
 
@@ -245,7 +246,7 @@ public class App {
             System.exit(0);
         }
 
-        EventKunjunganAmal eventKunjunganAmal = new EventKunjunganAmal(namaEvent, daftarEvent);
+        EventKunjunganAmal eventKunjunganAmal = new EventKunjunganAmal(daftarEvent);
         System.out.println(eventKunjunganAmal);
         System.out.println();
 
