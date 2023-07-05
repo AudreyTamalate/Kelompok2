@@ -14,7 +14,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
 
-        while (!exit) {
+        do {
             System.out.println("=== Menu ===");
             System.out.println("1. Relawan");
             System.out.println("2. Donasi");
@@ -68,7 +68,6 @@ public class App {
 
                 case 8:
                     tampilDataRelawan();
-                    exit = true;
                     break;
                 
                 //case 9:
@@ -79,32 +78,25 @@ public class App {
                 
                 case 10:
                     tampilDataDaurUlang();
-                    exit = true;
                     break;
 
                 case 11:
                     tampilDataDonorDarah();
-                    exit = true;
                     break;
                 
                 case 12:
                     tampilDataEventKunjunganAmal();
-                    exit = true;
                     break;
                 
                 case 13:
                     tampilDataRating();
-                    exit = true;
                     break;
-                    
-
-
                 
-
+                    
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-        }
+        }while(!exit);
 
         scanner.close();
     }
@@ -165,14 +157,7 @@ public class App {
         
 
     }
-    public static void tampilDataRelawan(){
-        
-//tampil
-        for (Relawan relawan2 : relawan) {
-            System.out.println("Nama \t Usia \t NIK \t JK \t Tlp");
-            System.out.println(relawan2);
-        }
-    }
+    
     
 
     public static void inputDonasi() {
@@ -244,14 +229,7 @@ public class App {
 
     }
 
-    public static void tampilDataDaurUlang(){
-        
-        //tampil
-                for (DaurUlang daurulang2 : daurUlang) {
-                    System.out.println("Jenis Barang Bekas \t Jumlah Barang Bekas \t");
-                    System.out.println(daurulang2);
-                }
-            }
+    
             
 
     public static void inputDonorDarah() {
@@ -289,14 +267,7 @@ public class App {
         input.close();
         
     }
-    public static void tampilDataDonorDarah(){
-        
-        //tampil
-                for (DonorDarah donordarah2 : donorDarah) {
-                    System.out.println("Golongan Darah Pendonor \t Keberhasilan Cek Darah \t");
-                    System.out.println(donordarah2);
-                }
-            }
+    
 
     public static void inputEventKunjunganAmal() {
        Scanner input = new Scanner(System.in);
@@ -331,15 +302,7 @@ public class App {
 
     }
 
-    public static void tampilDataEventKunjunganAmal(){
-        
-        //tampil
-                for (EventKunjunganAmal eventkunjunganamal2 : eventKunjunganAmal) {
-                    System.out.println("Jadwal \t ");
-                    System.out.println(eventkunjunganamal2);
-                
-                }
-            }
+    
 
     public static void inputRating() {
         Scanner input = new Scanner(System.in);
@@ -375,13 +338,41 @@ public class App {
         
 
     }
-    public static void tampilDataRating(){
-        
-        //tampil
-                for (Rating rating2 : rating) {
-                    System.out.println("Jadwal \t ");
-                    System.out.println(rating2);
-                }
+
+    public static void tampilDataRelawan(){
+        for (Relawan relawan2 : relawan) {
+            System.out.println("Nama \t Usia \t NIK \t JK \t Tlp");
+            System.out.println(relawan2);
+        }
+    }
+
+    public static void tampilDataDaurUlang(){
+        for (DaurUlang daurulang2 : daurUlang) {
+            System.out.println("Jenis Barang Bekas \t Jumlah Barang Bekas \t");
+            System.out.println(daurulang2);
             }
-    
+    }
+
+    public static void tampilDataDonorDarah(){
+        for (DonorDarah donordarah2 : donorDarah) {
+            System.out.println("Golongan Darah Pendonor \t Keberhasilan Cek Darah \t");
+            System.out.println(donordarah2);
+            }
+    }
+
+    public static void tampilDataEventKunjunganAmal(){
+        for (EventKunjunganAmal eventkunjunganamal2 : eventKunjunganAmal) {
+            System.out.println("Jadwal \t ");
+            System.out.println(eventkunjunganamal2);     
+            }
+    }
+
+    public static void tampilDataRating(){
+        for (Rating rating2 : rating) {
+            System.out.println("Jadwal \t ");
+            System.out.println(rating2);
+        }
+    }
+
+
 }
