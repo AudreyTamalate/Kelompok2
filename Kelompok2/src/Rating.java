@@ -4,14 +4,14 @@
 //owen(03081220010)
 public class Rating {
     private String ratingScore;
-    public Rating() {
-    }
+    private Relawan relawan;
+    
 
-
-    public Rating(String ratingScore) {
+    public Rating(String ratingScore, Relawan relawan) {
         this.ratingScore = ratingScore;
+        this.relawan = relawan;
     }
-   
+
 
     public String getRatingScore() {
         return this.ratingScore;
@@ -21,13 +21,28 @@ public class Rating {
         this.ratingScore = ratingScore;
     }
 
+    public Relawan getRelawan() {
+        return this.relawan;
+    }
+
+    public void setRelawan(Relawan relawan) {
+        this.relawan = relawan;
+    }
+
 
     @Override
     public String toString() {
         return "{" +
             " ratingScore='" + getRatingScore() + "'" +
+            ", relawan='" + getRelawan() + "'" +
             "}";
     }
+
+
+
+
+
+   
 
  
 }

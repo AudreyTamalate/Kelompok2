@@ -12,6 +12,8 @@ public abstract class Donasi {
     public Donasi() {
     }
 
+    public abstract void test();
+    
 
     public Donasi(String jenisDonasi, String jumlahDonasiDana, String jumlahDonasiBarang) {
         this.jenisDonasi = jenisDonasi;

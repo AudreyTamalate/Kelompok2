@@ -234,15 +234,18 @@ public class App {
 
     public static void inputDonorDarah() {
          Scanner input = new Scanner(System.in);
-        String golongandarahpendonor=" ",keberhasilancekdarah=" ";
+        String golongandarahpendonor=" ",keberhasilancekdarah=" ",NIK=" ";
+        System.out.print("NIK Pendonor\t:");
+        if(input.hasNextLine())
+            NIK = input.nextLine();
         System.out.print("GolonganDarahPendonor\t:");
         if(input.hasNextLine())
             golongandarahpendonor = input.nextLine();
         System.out.print("KeberhasilanCekDarah(y/n)\t:");
         if(input.hasNextLine())
             keberhasilancekdarah = input.nextLine();
-
-        donorDarah.add(new DonorDarah(golongandarahpendonor, keberhasilancekdarah));
+//(String golonganDarahPendonor, String keberhasilanCekDarah, Relawan relawan)
+        donorDarah.add(new DonorDarah(golongandarahpendonor, keberhasilancekdarah,cariRelawan(NIK)));
 //tampil
         for (DonorDarah donordarah2 : donorDarah) {
             System.out.println("GolonganDarahPendonor \t KeberhasilanCekDarah \t");
@@ -267,7 +270,14 @@ public class App {
         input.close();
         
     }
-    
+    public static Relawan cariRelawan(String NIK){
+        for (Relawan relawan2 : relawan) {
+            if(relawan2.getNIK().equals(NIK)){
+                return relawan2;
+            }
+        }
+        return null;
+    }
 
     public static void inputEventKunjunganAmal() {
        Scanner input = new Scanner(System.in);
@@ -306,12 +316,15 @@ public class App {
 
     public static void inputRating() {
         Scanner input = new Scanner(System.in);
-        String ratingscore=" ";
+        String ratingscore=" ";String NIK=" ";
+         System.out.print("NIK Pendonor\t:");
+        if(input.hasNextLine())
+            NIK = input.nextLine();
         System.out.print("RatingScore(1-5)\t:");
          ratingscore = input.nextLine();
        
 
-        rating.add(new Rating(ratingscore));
+        rating.add(new Rating(ratingscore,cariRelawan(NIK));
 //tampil
         for (Rating rating2 : rating) {
             System.out.println("RatingScore");

@@ -4,18 +4,19 @@
 public class DonorDarah {
     private String golonganDarahPendonor;
     private String keberhasilanCekDarah;
-    
+    private Relawan relawan;
 
 
 
     public DonorDarah() {
     }
 
+
     public DonorDarah(String golonganDarahPendonor, String keberhasilanCekDarah, Relawan relawan) {
         this.golonganDarahPendonor = golonganDarahPendonor;
         this.keberhasilanCekDarah = keberhasilanCekDarah;
+        this.relawan = relawan;
     }
-
 
     public DonorDarah(String golonganDarahPendonor, String keberhasilanCekDarah) {
         this.golonganDarahPendonor = golonganDarahPendonor;
@@ -39,11 +40,20 @@ public class DonorDarah {
     }
 
 
+    public Relawan getRelawan() {
+        return this.relawan;
+    }
+
+    public void setRelawan(Relawan relawan) {
+        this.relawan = relawan;
+    }
+
     @Override
     public String toString() {
         return "{" +
             " golonganDarahPendonor='" + getGolonganDarahPendonor() + "'" +
             ", keberhasilanCekDarah='" + getKeberhasilanCekDarah() + "'" +
+            ", relawan='" + getRelawan() + "'" +
             "}";
     }
 
