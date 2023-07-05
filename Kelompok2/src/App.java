@@ -6,7 +6,7 @@ public class App {
     public static ArrayList<DaurUlang> daurUlang=new ArrayList<DaurUlang>();
     public static ArrayList<DonorDarah> donorDarah=new ArrayList<DonorDarah>();
     public static ArrayList<Rating> rating=new ArrayList<Rating>();
-     public static ArrayList<EventKunjunganAmal> eventKunjunganAmal=new ArrayList<EventKunjunganAmal>();
+    public static ArrayList<EventKunjunganAmal> eventKunjunganAmal=new ArrayList<EventKunjunganAmal>();
 
     public static void main(String[] args) throws Exception {
         init();
@@ -24,6 +24,13 @@ public class App {
             System.out.println("6. Rating");
             System.out.println("7. Exit");
             System.out.println("8. Tampilkan Data Relawan");
+            System.out.println("9. Tampilkan Data Donasi");
+            System.out.println("10. Tampilkan Data DaurUlang");
+            System.out.println("11. Tampilkan Data Donor Darah");
+            System.out.println("12. Tampilkan Data Event Kunjungan Amal");
+            System.out.println("13. Tampilkan Data Rating");
+
+
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
@@ -63,6 +70,36 @@ public class App {
                     tampilDataRelawan();
                     exit = true;
                     break;
+                
+                //case 9:
+                    //tampilDataRelawan();
+                    //exit = true;
+                   // break;
+                
+                
+                case 10:
+                    tampilDataDaurUlang();
+                    exit = true;
+                    break;
+
+                case 11:
+                    tampilDataDonorDarah();
+                    exit = true;
+                    break;
+                
+                case 12:
+                    tampilDataEventKunjunganAmal();
+                    exit = true;
+                    break;
+                
+                case 13:
+                    tampilDataRating();
+                    exit = true;
+                    break;
+                    
+
+
+                
 
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -190,7 +227,7 @@ public class App {
         System.out.println();
         
 
-        System.out.println("Selamat anda telah terdaftar!");
+        System.out.println("DaurUlang berhasil!!!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
         String goBack = input.nextLine();
@@ -207,13 +244,23 @@ public class App {
 
     }
 
+    public static void tampilDataDaurUlang(){
+        
+        //tampil
+                for (DaurUlang daurulang2 : daurUlang) {
+                    System.out.println("Jenis Barang Bekas \t Jumlah Barang Bekas \t");
+                    System.out.println(daurulang2);
+                }
+            }
+            
+
     public static void inputDonorDarah() {
          Scanner input = new Scanner(System.in);
         String golongandarahpendonor=" ",keberhasilancekdarah=" ";
         System.out.print("GolonganDarahPendonor\t:");
         if(input.hasNextLine())
             golongandarahpendonor = input.nextLine();
-        System.out.print("KeberhasilanCekDarah\t:");
+        System.out.print("KeberhasilanCekDarah(y/n)\t:");
         if(input.hasNextLine())
             keberhasilancekdarah = input.nextLine();
 
@@ -227,7 +274,7 @@ public class App {
         System.out.println();
         
 
-        System.out.println("Selamat anda telah terdaftar!");
+        System.out.println("Donor Darah Berhasil!!!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
         String goBack = input.nextLine();
@@ -241,30 +288,33 @@ public class App {
         
         input.close();
         
-
     }
+    public static void tampilDataDonorDarah(){
+        
+        //tampil
+                for (DonorDarah donordarah2 : donorDarah) {
+                    System.out.println("Golongan Darah Pendonor \t Keberhasilan Cek Darah \t");
+                    System.out.println(donordarah2);
+                }
+            }
 
     public static void inputEventKunjunganAmal() {
        Scanner input = new Scanner(System.in);
         String jadwal=" ";
         System.out.print("Jadwal\t:");
-        if(input.hasNextLine())
             jadwal = input.nextLine();
-        System.out.print("NomorTelepon\t:");
-        if(input.hasNextLine())
-            nomorTelepon = input.nextLine();
 
-        eventKunjunganAmal.add(new );
+        eventKunjunganAmal.add(new EventKunjunganAmal(jadwal) );
 //tampil
-        for (Relawan relawan2 : relawan) {
-            System.out.println("Nama \t Usia \t NIK \t JK \t Tlp");
-            System.out.println(relawan2);
+        for (EventKunjunganAmal eventKunjunganAmal2: eventKunjunganAmal) {
+            System.out.println("Jadwal");
+            System.out.println(eventKunjunganAmal2);
         }
         
         System.out.println();
         
 
-        System.out.println("Selamat anda telah terdaftar!");
+        System.out.println("Selamat Event Kunjungan anda telah terdaftar!!!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
         String goBack = input.nextLine();
@@ -281,24 +331,35 @@ public class App {
 
     }
 
+    public static void tampilDataEventKunjunganAmal(){
+        
+        //tampil
+                for (EventKunjunganAmal eventkunjunganamal2 : eventKunjunganAmal) {
+                    System.out.println("Jadwal \t ");
+                    System.out.println(eventkunjunganamal2);
+                
+                }
+            }
+
     public static void inputRating() {
         Scanner input = new Scanner(System.in);
         String ratingscore=" ";
-        System.out.print("RatingScore\t:");
+        System.out.print("RatingScore(1-5)\t:");
          ratingscore = input.nextLine();
        
 
         rating.add(new Rating(ratingscore));
 //tampil
-        for (DonorDarah donordarah2 : donorDarah) {
-            System.out.println("GolonganDarahPendonor \t KeberhasilanCekDarah \t");
-            System.out.println(donordarah2);
+        for (Rating rating2 : rating) {
+            System.out.println("RatingScore");
+            System.out.println(rating2);
+        
         }
         
         System.out.println();
         
 
-        System.out.println("Selamat anda telah terdaftar!");
+        System.out.println("TerimaKasih atas Rating anda!!!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
         String goBack = input.nextLine();
@@ -314,4 +375,13 @@ public class App {
         
 
     }
+    public static void tampilDataRating(){
+        
+        //tampil
+                for (Rating rating2 : rating) {
+                    System.out.println("Jadwal \t ");
+                    System.out.println(rating2);
+                }
+            }
+    
 }

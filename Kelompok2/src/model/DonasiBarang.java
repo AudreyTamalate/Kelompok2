@@ -7,7 +7,7 @@ public class DonasiBarang extends Donasi {
     }
 
     public static void DonasiBarang(){
-        System.out.prinln("Terimakasih Atas Donasinya")
+        System.out.prinln("Terimakasih Atas Donasinya");
 
 public class DonasiBarang  extends Donasi {
     @Override

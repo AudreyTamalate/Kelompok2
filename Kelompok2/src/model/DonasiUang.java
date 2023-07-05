@@ -7,7 +7,7 @@ public class DonasiUang extends Donasi {
     }
 
     public static void DonasiUang(){
-        System.out.prinln("Terimakasih Atas Donasinya")
+        System.out.prinln("Terimakasih Atas Donasinya");
     }
 
 public class DonasiUang  extends Donasi {
