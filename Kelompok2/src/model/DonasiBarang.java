@@ -21,7 +21,7 @@ public class DonasiBarang extends Donasi{
     }
 
     @Override
-    public  void test(){
-        System.out.println();
+    public  void satuan(){
+        System.out.println("Apakah barang anda dalam satuan? Jika iya masukan satuan, jika tidak (-)");
     }
 }

@@ -8,19 +8,10 @@ public class DonorDarah {
 
 
 
-    public DonorDarah() {
-    }
-
-
     public DonorDarah(String golonganDarahPendonor, String keberhasilanCekDarah, Relawan relawan) {
         this.golonganDarahPendonor = golonganDarahPendonor;
         this.keberhasilanCekDarah = keberhasilanCekDarah;
         this.relawan = relawan;
-    }
-
-    public DonorDarah(String golonganDarahPendonor, String keberhasilanCekDarah) {
-        this.golonganDarahPendonor = golonganDarahPendonor;
-        this.keberhasilanCekDarah = keberhasilanCekDarah;
     }
 
     public String getGolonganDarahPendonor() {

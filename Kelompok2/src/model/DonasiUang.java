@@ -12,7 +12,7 @@ public class DonasiUang extends Donasi{
     }
 
     @Override
-    public  void test(){
-        System.out.println();
+    public  void satuan(){
+        System.out.println("Satuan Uang(Rp.50.000 atau Rp.100.000)");
     }
 }

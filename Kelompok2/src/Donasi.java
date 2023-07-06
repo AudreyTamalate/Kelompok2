@@ -6,17 +6,16 @@ public abstract class Donasi {
     public String jenisDonasi;
     public String jumlahDonasiDana;
     public String jumlahDonasiBarang;
-
-    public Donasi() {
-    }
+    private Relawan relawan;
 
 
-    public Donasi(String jenisDonasi, String jumlahDonasiDana, String jumlahDonasiBarang) {
+    public Donasi(String jenisDonasi, String jumlahDonasiDana, String jumlahDonasiBarang, Relawan relawan) {
         this.jenisDonasi = jenisDonasi;
         this.jumlahDonasiDana = jumlahDonasiDana;
         this.jumlahDonasiBarang = jumlahDonasiBarang;
+        this.relawan = relawan;
     }
-    
+
 
     public String getJenisDonasi() {
         return this.jenisDonasi;
@@ -42,6 +41,14 @@ public abstract class Donasi {
         this.jumlahDonasiBarang = jumlahDonasiBarang;
     }
 
+    public Relawan getRelawan() {
+        return this.relawan;
+    }
+
+    public void setRelawan(Relawan relawan) {
+        this.relawan = relawan;
+    }
+
 
     @Override
     public String toString() {
@@ -49,7 +56,8 @@ public abstract class Donasi {
             " jenisDonasi='" + getJenisDonasi() + "'" +
             ", jumlahDonasiDana='" + getJumlahDonasiDana() + "'" +
             ", jumlahDonasiBarang='" + getJumlahDonasiBarang() + "'" +
+            ", relawan='" + getRelawan() + "'" +
             "}";
     }
+}
     
-    }

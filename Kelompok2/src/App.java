@@ -104,12 +104,16 @@ public class App {
     public static void init() {
         System.out.println("Initializing...");
         
-        Relawan upin = new Relawan("Upin", "18", "1201008186030062", "Laki-laki", "0857983216521");
+        Relawan upin = new Relawan("Upin", "18", "120888", "Laki-laki", "08188834532");
         relawan.add(upin);
-        Relawan ipin = new Relawan("Ipin", "12", "120451515860151", "Laki-laki", "0845626295164");
+        Relawan ipin = new Relawan("Ipin", "12", "120999", "Laki-laki", "08199912343");
         relawan.add(ipin);
-        Relawan apin = new Relawan("Apin", "22", "1208151315161315315", "Perempuan", "081511161");
+        Relawan apin = new Relawan("Apin", "22", "120777", "Perempuan", "08155545621");
         relawan.add(apin);
+        Relawan mail = new Relawan("Mail", "17", "120666", "Laki-laki", "08133378901");
+        relawan.add(mail);
+        Relawan meimei = new Relawan("Meimei", "25", "120555", "Perempuan", "08122256702");
+        relawan.add(meimei);
     }
     
     public static void inputDataRelawan(){
@@ -161,22 +165,34 @@ public class App {
     
 
     public static void inputDonasi() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        String jenisDonasi=" ",jumlahDonasi=" ",NIK=" ";
+        System.out.print("NIK Relawan\t:");
+        if(input.hasNextLine())
+            NIK = input.nextLine();
+        System.out.print("Jenis Donasi (1.Dana/2.Barang)\t:");
+        if(input.hasNextLine())
+           jenisDonasi = input.nextLine();
+        System.out.print("Jumlah DonasiDana\t:");
+        if(input.hasNextLine())
+            jumlahDonasi = input.nextLine();
+   
 
-        System.out.println("Jenis Donasi");
-        System.out.println("1.Donasi Barang");
-        System.out.println("2.Donasi Uang");
-        System.out.print("Pilih [1/2]: ");
-        String jenisDonasi = scanner.nextLine();
 
+        Donasi.add(new donasi(jenisDonasi, jumlahDonasi,cariRelawan(NIK)));
+//tampil
+        for (Donasi donasi2 : donasi) {
+            System.out.println("GolonganDarahPendonor \t KeberhasilanCekDarah \t");
+            System.out.println(donasi2);
+        }
         
-        System.out.print("Jumlah Donasi: ");
-        String jumlahDonasi = scanner.nextLine();
+        System.out.println();
+        
 
-        System.out.println("Terima kasih atas donasi anda!");
+        System.out.println("Donor Darah Berhasil!!!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
-        String goBack = scanner.nextLine();
+        String goBack = input.nextLine();
         if (goBack.equalsIgnoreCase("yes")) {
             return;
         } else if (goBack.equalsIgnoreCase("no")) {
@@ -184,17 +200,17 @@ public class App {
             System.out.println("Goodbye!");
             System.exit(0);
         }
-
-        DaurUlang daurUlang = new DaurUlang(jenisDonasi, jumlahDonasi);
-    System.out.println(daurUlang);
-    System.out.println();
-
-    scanner.close();
-}
+        
+        input.close();
+        
+    }
 
     public static void inputDaurUlang() {
        Scanner input = new Scanner(System.in);
-        String jenisbarangbekas=" ",jumlahbarangbekas=" ";
+        String jenisbarangbekas=" ",jumlahbarangbekas=" ";String NIK=" ";
+        System.out.print("NIK Relawan\t:");
+        if(input.hasNextLine())
+            NIK = input.nextLine();
         System.out.print("jenisbarangbekas\t:");
         if(input.hasNextLine())
             jenisbarangbekas = input.nextLine();
@@ -202,7 +218,7 @@ public class App {
         if(input.hasNextLine())
             jumlahbarangbekas = input.nextLine();
 
-        daurUlang.add(new DaurUlang(jenisbarangbekas, jumlahbarangbekas));
+        daurUlang.add(new DaurUlang(jenisbarangbekas, jumlahbarangbekas,cariRelawan(NIK)));
 //tampil
         for (DaurUlang daurulang2 : daurUlang) {
             System.out.println("JenisBarangBekas \t JumlahBarangBekas \t");
@@ -281,11 +297,14 @@ public class App {
 
     public static void inputEventKunjunganAmal() {
        Scanner input = new Scanner(System.in);
-        String jadwal=" ";
+        String jadwal=" ";String NIK="";
+        System.out.print("NIK Relawan\t:");
+        if(input.hasNextLine())
+            NIK = input.nextLine();
         System.out.print("Jadwal\t:");
             jadwal = input.nextLine();
 
-        eventKunjunganAmal.add(new EventKunjunganAmal(jadwal) );
+        eventKunjunganAmal.add(new EventKunjunganAmal(jadwal,cariRelawan(NIK)) );
 //tampil
         for (EventKunjunganAmal eventKunjunganAmal2: eventKunjunganAmal) {
             System.out.println("Jadwal");
@@ -324,7 +343,7 @@ public class App {
          ratingscore = input.nextLine();
        
 
-        rating.add(new Rating(ratingscore,cariRelawan(NIK));
+        rating.add(new Rating(ratingscore,cariRelawan(NIK)));
 //tampil
         for (Rating rating2 : rating) {
             System.out.println("RatingScore");

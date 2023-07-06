@@ -5,11 +5,13 @@
 public class DaurUlang {
     private String jenisBarangBekas;
     private String jumlahBarangBekas;
+    private Relawan relawan;
     
 
-    public DaurUlang(String jenisBarangBekas, String jumlahBarangBekas) {
+    public DaurUlang(String jenisBarangBekas, String jumlahBarangBekas, Relawan relawan) {
         this.jenisBarangBekas = jenisBarangBekas;
         this.jumlahBarangBekas = jumlahBarangBekas;
+        this.relawan = relawan;
     }
 
 
@@ -29,12 +31,22 @@ public class DaurUlang {
         this.jumlahBarangBekas = jumlahBarangBekas;
     }
 
+    public Relawan getRelawan() {
+        return this.relawan;
+    }
+
+    public void setRelawan(Relawan relawan) {
+        this.relawan = relawan;
+    }
+
 
     @Override
     public String toString() {
-        return "|" +
-            " " + getJenisBarangBekas() + "'" +
-            " " + getJumlahBarangBekas() + "'" +
-            " ";
+        return "{" +
+            " jenisBarangBekas='" + getJenisBarangBekas() + "'" +
+            ", jumlahBarangBekas='" + getJumlahBarangBekas() + "'" +
+            ", relawan='" + getRelawan() + "'" +
+            "}";
     }
-}   
+}
+    
