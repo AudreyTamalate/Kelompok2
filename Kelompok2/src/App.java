@@ -29,6 +29,14 @@ public class App {
             System.out.println("11. Tampilkan Data Donor Darah");
             System.out.println("12. Tampilkan Data Event Kunjungan Amal");
             System.out.println("13. Tampilkan Data Rating");
+            System.out.println("14. Hapus Data Relawan");
+            //System.out.println("15. Hapus Data Donasi");
+            System.out.println("16. Hapus Data Daur Ulang");
+            System.out.println("17. Hapus Data Donasi Darah");
+            System.out.println("16. Hapus Data Event Kunjungan Amal");
+            System.out.println("16. Hapus Data Rating");
+
+            
 
 
             System.out.print("Enter your choice: ");
@@ -91,7 +99,26 @@ public class App {
                 case 13:
                     tampilDataRating();
                     break;
-                
+
+                case 14:
+                    hapusRelawan(0);
+                    break;
+               // case 15 :
+                   // hapusDonasi(0);
+                    //break;
+                case 16 :
+                    hapusdaurUlang(0);
+                    break;
+                case 17 :
+                    hapusdonorDarah(0);
+                    break;
+                case 18:
+                    hapuseventKunjunganAmal(0);
+                break;
+                case 19:
+                    hapusrating(0);
+                break;
+
                     
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -405,6 +432,30 @@ public class App {
             System.out.println(rating2);
         }
     }
+    
 
+    public static void hapusRelawan(int upin) {
+        relawan.remove(upin);
+    }
+
+    //public static void hapusDonasi(int upin) {
+        //donasi.remove(upin);
+    //}
+
+    public static void hapusdaurUlang(int upin) {
+        daurUlang.remove(upin);
+    }
+
+    public static void hapusdonorDarah(int upin) {
+        donorDarah.remove(upin);
+    }
+
+    public static void hapuseventKunjunganAmal(int upin) {
+        eventKunjunganAmal.remove(upin);
+    }
+
+    public static void hapusrating(int upin) {
+        rating.remove(upin);
+    }
 
 }
