@@ -32,10 +32,10 @@ public class Rating {
 
     @Override
     public String toString() {
-        return "{" +
-            " ratingScore='" + getRatingScore() + "'" +
-            ", relawan='" + getRelawan() + "'" +
-            "}";
+        return "|" +
+            " " + getRatingScore() + "'" +
+            " " + getRelawan() + "'" +
+            " ";
     }
 
 

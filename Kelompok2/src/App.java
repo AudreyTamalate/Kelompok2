@@ -192,6 +192,7 @@ public class App {
     
 
     public static void inputDonasi() {
+        
         Scanner input = new Scanner(System.in);
         String jenisDonasi=" ",jumlahDonasi=" ",NIK=" ";
         System.out.print("NIK Relawan\t:");
@@ -206,7 +207,7 @@ public class App {
    
 
 
-        Donasi.add(new donasi(jenisDonasi, jumlahDonasi,cariRelawan(NIK)));
+        Donasi.add(new Donasi(jenisDonasi, jumlahDonasi,cariRelawan(NIK)));
 //tampil
         for (Donasi donasi2 : donasi) {
             System.out.println("GolonganDarahPendonor \t KeberhasilanCekDarah \t");
@@ -231,6 +232,8 @@ public class App {
         input.close();
         
     }
+
+
 
     public static void inputDaurUlang() {
        Scanner input = new Scanner(System.in);

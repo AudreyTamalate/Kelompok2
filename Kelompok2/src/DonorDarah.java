@@ -41,11 +41,11 @@ public class DonorDarah {
 
     @Override
     public String toString() {
-        return "{" +
-            " golonganDarahPendonor='" + getGolonganDarahPendonor() + "'" +
-            ", keberhasilanCekDarah='" + getKeberhasilanCekDarah() + "'" +
-            ", relawan='" + getRelawan() + "'" +
-            "}";
+        return "|" +
+            " " + getGolonganDarahPendonor() + "'" +
+            " " + getKeberhasilanCekDarah() + "'" +
+            " " + getRelawan() + "'" +
+            " ";
     }
 
     

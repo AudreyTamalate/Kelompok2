@@ -5,9 +5,10 @@
 package model;
 
 public abstract class Donasi {
-    public String jenisDonasi;
-    public String jumlahDonasiDana;
-    public String jumlahDonasiBarang;
+    private String jenisDonasi;
+    private String jumlahDonasiDana;
+    private String jumlahDonasiBarang;
+    private String relawan;
 
     public Donasi() {
     }
@@ -15,11 +16,14 @@ public abstract class Donasi {
     public abstract void satuan();
     
 
-    public Donasi(String jenisDonasi, String jumlahDonasiDana, String jumlahDonasiBarang) {
+
+    public Donasi(String jenisDonasi, String jumlahDonasiDana, String jumlahDonasiBarang, String relawan) {
         this.jenisDonasi = jenisDonasi;
         this.jumlahDonasiDana = jumlahDonasiDana;
         this.jumlahDonasiBarang = jumlahDonasiBarang;
+        this.relawan = relawan;
     }
+    
     
 
     public String getJenisDonasi() {
@@ -46,14 +50,27 @@ public abstract class Donasi {
         this.jumlahDonasiBarang = jumlahDonasiBarang;
     }
 
+    public String getRelawan() {
+        return this.relawan;
+    }
+
+    public void setRelawan(String relawan) {
+        this.relawan = relawan;
+    }
+    
 
     @Override
     public String toString() {
-        return "{" +
-            " jenisDonasi='" + getJenisDonasi() + "'" +
-            ", jumlahDonasiDana='" + getJumlahDonasiDana() + "'" +
-            ", jumlahDonasiBarang='" + getJumlahDonasiBarang() + "'" +
-            "}";
+        return "|" +
+            " " + getJenisDonasi() + "'" +
+            " " + getJumlahDonasiDana() + "'" +
+            " " + getJumlahDonasiBarang() + "'" +
+            " " + getRelawan() + "'" +
+            " ";
+    }
+
+    
+    public static void add(Donasi donasi) {
     }
     
     }

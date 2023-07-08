@@ -32,10 +32,10 @@ public class EventKunjunganAmal {
 
     @Override
     public String toString() {
-        return "{" +
-            " jadwal='" + getJadwal() + "'" +
-            ", relawan='" + getRelawan() + "'" +
-            "}";
+        return "|" +
+            " " + getJadwal() + "'" +
+            " " + getRelawan() + "'" +
+            " ";
     }
 }
 

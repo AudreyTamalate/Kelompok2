@@ -42,11 +42,11 @@ public class DaurUlang {
 
     @Override
     public String toString() {
-        return "{" +
-            " jenisBarangBekas='" + getJenisBarangBekas() + "'" +
-            ", jumlahBarangBekas='" + getJumlahBarangBekas() + "'" +
-            ", relawan='" + getRelawan() + "'" +
-            "}";
+        return "|" +
+            " " + getJenisBarangBekas() + "'" +
+            " " + getJumlahBarangBekas() + "'" +
+            " " + getRelawan() + "'" +
+            " ";
     }
 }
     
