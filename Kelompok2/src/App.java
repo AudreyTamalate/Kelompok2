@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import model.DonasiUang;
-
 public class App {
     public static ArrayList<Relawan> relawan=new ArrayList<Relawan>();
     public static ArrayList<DaurUlang> daurUlang=new ArrayList<DaurUlang>();
@@ -32,7 +30,7 @@ public class App {
             System.out.println("12. Tampilkan Data Event Kunjungan Amal");
             System.out.println("13. Tampilkan Data Rating");
             System.out.println("14. Hapus Data Relawan");
-            //System.out.println("15. Hapus Data Donasi");
+            System.out.println("15. Hapus Data Donasi");
             System.out.println("16. Hapus Data Daur Ulang");
             System.out.println("17. Hapus Data Donasi Darah");
             System.out.println("16. Hapus Data Event Kunjungan Amal");
@@ -80,10 +78,9 @@ public class App {
                     tampilDataRelawan();
                     break;
                 
-                //case 9:
-                    //tampilDataRelawan();
-                    //exit = true;
-                   // break;
+                case 9:
+                    tampilDataDonasi();
+                    break;
                 
                 
                 case 10:
@@ -105,9 +102,9 @@ public class App {
                 case 14:
                     hapusRelawan(0);
                     break;
-               // case 15 :
-                   // hapusDonasi(0);
-                    //break;
+                case 15 :
+                    hapusDonasi(0);
+                    break;
                 case 16 :
                     hapusdaurUlang(0);
                     break;
@@ -194,33 +191,29 @@ public class App {
     
 
     public static void inputDonasi() {
-
         Scanner input = new Scanner(System.in);
-        String jenisDonasi=" ",jumlahDonasi=" ",NIK=" ";
+        String jenisbarangbekas=" ",jumlahbarangbekas=" ";String NIK=" ";
         System.out.print("NIK Relawan\t:");
-        
-        int code = input.nextInt();
-        System.out.print("Jenis Donasi (1.Dana/2.Barang)\t:");
-        System.out.print("Jumlah DonasiDana\t:");
+        if(input.hasNextLine())
+            NIK = input.nextLine();
+        System.out.print("jenis donasi (1.Barang/2.Dana)\t:");
+        if(input.hasNextLine())
+            jenisbarangbekas = input.nextLine();
+        System.out.print("jumlah donasi\t:");
+        if(input.hasNextLine())
+            jumlahbarangbekas = input.nextLine();
 
-        switch(code){
-            case 1:
-                System.out.print("Jumlah DonasiDana\t:");
-                DonasiUang.add(new DonasiUang());
-        }
-
-
-        Donasi.add(new Donasi(jenisDonasi, jumlahDonasi,cariRelawan(NIK)));
+        daurUlang.add(new DaurUlang(jenisbarangbekas, jumlahbarangbekas,cariRelawan(NIK)));
 //tampil
-        for (Donasi donasi2 : donasi) {
-            System.out.println("GolonganDarahPendonor \t KeberhasilanCekDarah \t");
-            System.out.println(donasi2);
+        for (DaurUlang daurulang2 : daurUlang) {
+            System.out.println("Jenis Donasi \t Jumlah Donasi \t");
+            System.out.println(daurulang2);
         }
         
         System.out.println();
         
 
-        System.out.println("Donasi Berhasil!!!");
+        System.out.println("Donasi berhasil!!!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
         String goBack = input.nextLine();
@@ -234,8 +227,10 @@ public class App {
         
         input.close();
         
+
     }
-    
+
+        
 
 
     public static void inputDaurUlang() {
@@ -277,9 +272,6 @@ public class App {
         
 
     }
-
-    
-            
 
     public static void inputDonorDarah() {
          Scanner input = new Scanner(System.in);
@@ -410,6 +402,12 @@ public class App {
             System.out.println(relawan2);
         }
     }
+    public static void tampilDataDonasi(){
+        for (DaurUlang daurulang2 : daurUlang) {
+            System.out.println("Jenis Donasi \t Jumlah Donasi \t");
+            System.out.println(daurulang2);
+            }
+    }
 
     public static void tampilDataDaurUlang(){
         for (DaurUlang daurulang2 : daurUlang) {
@@ -444,9 +442,9 @@ public class App {
         relawan.remove(upin);
     }
 
-    //public static void hapusDonasi(int upin) {
-        //donasi.remove(upin);
-    //}
+    public static void hapusDonasi(int upin) {
+        daurUlang.remove(upin);
+    }
 
     public static void hapusdaurUlang(int upin) {
         daurUlang.remove(upin);
