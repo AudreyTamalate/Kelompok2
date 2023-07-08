@@ -6,8 +6,7 @@ package model;
 
 public abstract class Donasi {
     private String jenisDonasi;
-    private String jumlahDonasiDana;
-    private String jumlahDonasiBarang;
+    private String jumlahDonasi;
     private String relawan;
 
     public Donasi() {
@@ -15,15 +14,10 @@ public abstract class Donasi {
 
     public abstract void satuan();
     
-
-
-    public Donasi(String jenisDonasi, String jumlahDonasiDana, String jumlahDonasiBarang, String relawan) {
+    public Donasi(String jenisDonasi, String relawan) {
         this.jenisDonasi = jenisDonasi;
-        this.jumlahDonasiDana = jumlahDonasiDana;
-        this.jumlahDonasiBarang = jumlahDonasiBarang;
         this.relawan = relawan;
     }
-    
     
 
     public String getJenisDonasi() {
@@ -34,20 +28,12 @@ public abstract class Donasi {
         this.jenisDonasi = jenisDonasi;
     }
 
-    public String getJumlahDonasiDana() {
-        return this.jumlahDonasiDana;
+    public String getJumlahDonasi() {
+        return this.jumlahDonasi;
     }
 
-    public void setJumlahDonasiDana(String jumlahDonasiDana) {
-        this.jumlahDonasiDana = jumlahDonasiDana;
-    }
-
-    public String getJumlahDonasiBarang() {
-        return this.jumlahDonasiBarang;
-    }
-
-    public void setJumlahDonasiBarang(String jumlahDonasiBarang) {
-        this.jumlahDonasiBarang = jumlahDonasiBarang;
+    public void setJumlahDonasi(String jumlahDonasi) {
+        this.jumlahDonasi = jumlahDonasi;
     }
 
     public String getRelawan() {
@@ -63,8 +49,7 @@ public abstract class Donasi {
     public String toString() {
         return "|" +
             " " + getJenisDonasi() + "'" +
-            " " + getJumlahDonasiDana() + "'" +
-            " " + getJumlahDonasiBarang() + "'" +
+            " " + getJumlahDonasi() + "'" +
             " " + getRelawan() + "'" +
             " ";
     }

@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.DonasiUang;
+
 public class App {
     public static ArrayList<Relawan> relawan=new ArrayList<Relawan>();
     public static ArrayList<DaurUlang> daurUlang=new ArrayList<DaurUlang>();
@@ -192,19 +194,20 @@ public class App {
     
 
     public static void inputDonasi() {
-        
+
         Scanner input = new Scanner(System.in);
         String jenisDonasi=" ",jumlahDonasi=" ",NIK=" ";
         System.out.print("NIK Relawan\t:");
-        if(input.hasNextLine())
-            NIK = input.nextLine();
+        
+        int code = input.nextInt();
         System.out.print("Jenis Donasi (1.Dana/2.Barang)\t:");
-        if(input.hasNextLine())
-           jenisDonasi = input.nextLine();
         System.out.print("Jumlah DonasiDana\t:");
-        if(input.hasNextLine())
-            jumlahDonasi = input.nextLine();
-   
+
+        switch(code){
+            case 1:
+                System.out.print("Jumlah DonasiDana\t:");
+                DonasiUang.add(new DonasiUang());
+        }
 
 
         Donasi.add(new Donasi(jenisDonasi, jumlahDonasi,cariRelawan(NIK)));
@@ -217,7 +220,7 @@ public class App {
         System.out.println();
         
 
-        System.out.println("Donor Darah Berhasil!!!");
+        System.out.println("Donasi Berhasil!!!");
 
         System.out.print("Do you want to go back to the main menu? (yes/no): ");
         String goBack = input.nextLine();
@@ -232,7 +235,7 @@ public class App {
         input.close();
         
     }
-
+    
 
 
     public static void inputDaurUlang() {

@@ -2,7 +2,7 @@ package model;
 
 public class DonasiBarang extends Donasi{
     String jenisBarang;
-    int jumlahBarang;
+    String jumlahBarang;
 
     public String getJenisBarang() {
         return this.jenisBarang;
@@ -12,11 +12,11 @@ public class DonasiBarang extends Donasi{
         this.jenisBarang = jenisBarang;
     }
 
-    public int getJumlahBarang() {
+    public String getJumlahBarang() {
         return this.jumlahBarang;
     }
 
-    public void setJumlahBarang(int jumlahBarang) {
+    public void setJumlahBarang(String jumlahBarang) {
         this.jumlahBarang = jumlahBarang;
     }
 
